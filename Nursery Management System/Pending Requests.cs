@@ -16,7 +16,9 @@ namespace Nursery_Management_System
         {
             InitializeComponent();
             DataTable pennding = new DataTable();
+            DataTable all = new DataTable();
             SQLQuery MyQuery = new SQLQuery();
+            SQLQuery MyQuery2 = new SQLQuery();
 
             // staff pennding list veiw load
             pennding = MyQuery.getPendingStaff();
@@ -37,19 +39,48 @@ namespace Nursery_Management_System
             foreach (DataRow row in pennding.Rows)
             {
                 ListViewItem item = new ListViewItem(row[1].ToString());
-                for (int i = 2; i <= 4; i++)
-                {
-                    item.SubItems.Add(row[i].ToString());
-                }
+               
+                    item.SubItems.Add(row[2].ToString());
+                item.SubItems.Add(row[4].ToString());
+                item.SubItems.Add(row[6].ToString());
+
                 parentsListView.Items.Add(item);
             }
             parentsListView.View = View.Details;
             parentsListView.FullRowSelect = true;
 
             // Child Pending listview laod
+            
+            
+                ImageOperation OP = new ImageOperation();
+                ImageList imgs = new ImageList();
+                   pennding = MyQuery2.getPendingChild();
+                    foreach (DataRow rows in pennding.Rows)
+                    {
+                /*
+                imgs.ImageSize = new Size(100, 100);
+                Image image = OP.StringToImage((rows[6].ToString()));
+                imgs.Images.Add("Key",image);
+                childListView.LargeImageList = imgs;
+                */
+                
+                        ListViewItem item = new ListViewItem(rows[1].ToString());
+                       // item.ImageKey = "Key";
+                        item.SubItems.Add(rows[2].ToString());
+                        item.SubItems.Add(rows[4].ToString());
+                        childListView.Items.Add(item);
+                    }
+            childListView.View = View.Details;
+            childListView.FullRowSelect = true;
 
 
 
+
+        }
+        private void pupulate(string Img)
+        {
+            // IMAGELIST TO IMG
+            
 
 
         }

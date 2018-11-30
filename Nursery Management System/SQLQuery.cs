@@ -223,7 +223,7 @@ namespace Nursery_Management_System
         }
 
         //uses specific query to select child by ID from database
-        public DataTable getChildByID(int id)
+        public DataTable getChildByID(Int64 id)
         {
             string query = "select * from Child where childID = " + Convert.ToString(id);
             return getChild(query);
@@ -247,6 +247,11 @@ namespace Nursery_Management_System
         public DataTable getPendingChildByParentID(Int64 id)
         {
             string query = "select * from Child where parentID = " + Convert.ToString(id) + " and childIsPending = 1";
+            return getChild(query);
+        }
+        public DataTable getPendingChild()
+        {
+            string query = "select * from Child where childIsPending = 1";
             return getChild(query);
         }
 

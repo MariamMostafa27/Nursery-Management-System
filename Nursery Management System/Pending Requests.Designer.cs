@@ -31,21 +31,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminPendingRequests));
             this.pendingRequestsControl = new System.Windows.Forms.TabControl();
             this.staff = new System.Windows.Forms.TabPage();
-            this.backButtonStaff = new System.Windows.Forms.Button();
-            this.child = new System.Windows.Forms.TabPage();
-            this.backButtonChild = new System.Windows.Forms.Button();
-            this.Parents = new System.Windows.Forms.TabPage();
-            this.backButtonParents = new System.Windows.Forms.Button();
             this.staffListView = new System.Windows.Forms.ListView();
             this.staffFirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.staffLastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.staffPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.staffEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.backButtonStaff = new System.Windows.Forms.Button();
+            this.child = new System.Windows.Forms.TabPage();
+            this.backButtonChild = new System.Windows.Forms.Button();
+            this.Parents = new System.Windows.Forms.TabPage();
             this.parentsListView = new System.Windows.Forms.ListView();
             this.parentsFirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.parentsLastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.parentsPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.parentsEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.backButtonParents = new System.Windows.Forms.Button();
+            this.childListView = new System.Windows.Forms.ListView();
+            this.childName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.childParent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.childGender = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.childPicture = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pendingRequestsControl.SuspendLayout();
             this.staff.SuspendLayout();
             this.child.SuspendLayout();
@@ -78,6 +83,39 @@
             this.staff.Text = "Staff";
             this.staff.UseVisualStyleBackColor = true;
             // 
+            // staffListView
+            // 
+            this.staffListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.staffFirstName,
+            this.staffLastName,
+            this.staffPhoneNumber,
+            this.staffEmail});
+            this.staffListView.Location = new System.Drawing.Point(-4, 0);
+            this.staffListView.Name = "staffListView";
+            this.staffListView.Size = new System.Drawing.Size(916, 401);
+            this.staffListView.TabIndex = 11;
+            this.staffListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // staffFirstName
+            // 
+            this.staffFirstName.Text = "First Name";
+            this.staffFirstName.Width = 120;
+            // 
+            // staffLastName
+            // 
+            this.staffLastName.Text = "Last Name";
+            this.staffLastName.Width = 120;
+            // 
+            // staffPhoneNumber
+            // 
+            this.staffPhoneNumber.Text = "Phone Number";
+            this.staffPhoneNumber.Width = 150;
+            // 
+            // staffEmail
+            // 
+            this.staffEmail.Text = "Email";
+            this.staffEmail.Width = 240;
+            // 
             // backButtonStaff
             // 
             this.backButtonStaff.AutoSize = true;
@@ -100,6 +138,7 @@
             // 
             // child
             // 
+            this.child.Controls.Add(this.childListView);
             this.child.Controls.Add(this.backButtonChild);
             this.child.Location = new System.Drawing.Point(4, 52);
             this.child.Name = "child";
@@ -141,59 +180,6 @@
             this.Parents.Text = "Parents";
             this.Parents.UseVisualStyleBackColor = true;
             // 
-            // backButtonParents
-            // 
-            this.backButtonParents.AutoSize = true;
-            this.backButtonParents.BackColor = System.Drawing.Color.Transparent;
-            this.backButtonParents.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.backButtonParents.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.backButtonParents.FlatAppearance.BorderSize = 0;
-            this.backButtonParents.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.backButtonParents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.backButtonParents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButtonParents.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.backButtonParents.Image = ((System.Drawing.Image)(resources.GetObject("backButtonParents.Image")));
-            this.backButtonParents.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.backButtonParents.Location = new System.Drawing.Point(6, 386);
-            this.backButtonParents.Name = "backButtonParents";
-            this.backButtonParents.Size = new System.Drawing.Size(107, 90);
-            this.backButtonParents.TabIndex = 11;
-            this.backButtonParents.UseVisualStyleBackColor = false;
-            this.backButtonParents.Click += new System.EventHandler(this.backButtonParents_Click);
-            // 
-            // staffListView
-            // 
-            this.staffListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.staffFirstName,
-            this.staffLastName,
-            this.staffPhoneNumber,
-            this.staffEmail});
-            this.staffListView.Location = new System.Drawing.Point(-4, 0);
-            this.staffListView.Name = "staffListView";
-            this.staffListView.Size = new System.Drawing.Size(916, 401);
-            this.staffListView.TabIndex = 11;
-            this.staffListView.UseCompatibleStateImageBehavior = false;
-            // 
-            // staffFirstName
-            // 
-            this.staffFirstName.Text = "First Name";
-            this.staffFirstName.Width = 120;
-            // 
-            // staffLastName
-            // 
-            this.staffLastName.Text = "Last Name";
-            this.staffLastName.Width = 120;
-            // 
-            // staffPhoneNumber
-            // 
-            this.staffPhoneNumber.Text = "Phone Number";
-            this.staffPhoneNumber.Width = 150;
-            // 
-            // staffEmail
-            // 
-            this.staffEmail.Text = "Email";
-            this.staffEmail.Width = 240;
-            // 
             // parentsListView
             // 
             this.parentsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -226,6 +212,59 @@
             // 
             this.parentsEmail.Text = "Email";
             this.parentsEmail.Width = 240;
+            // 
+            // backButtonParents
+            // 
+            this.backButtonParents.AutoSize = true;
+            this.backButtonParents.BackColor = System.Drawing.Color.Transparent;
+            this.backButtonParents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backButtonParents.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.backButtonParents.FlatAppearance.BorderSize = 0;
+            this.backButtonParents.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.backButtonParents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.backButtonParents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButtonParents.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.backButtonParents.Image = ((System.Drawing.Image)(resources.GetObject("backButtonParents.Image")));
+            this.backButtonParents.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.backButtonParents.Location = new System.Drawing.Point(6, 386);
+            this.backButtonParents.Name = "backButtonParents";
+            this.backButtonParents.Size = new System.Drawing.Size(107, 90);
+            this.backButtonParents.TabIndex = 11;
+            this.backButtonParents.UseVisualStyleBackColor = false;
+            this.backButtonParents.Click += new System.EventHandler(this.backButtonParents_Click);
+            // 
+            // childListView
+            // 
+            this.childListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.childName,
+            this.childParent,
+            this.childGender,
+            this.childPicture});
+            this.childListView.Location = new System.Drawing.Point(-4, 0);
+            this.childListView.Name = "childListView";
+            this.childListView.Size = new System.Drawing.Size(916, 401);
+            this.childListView.TabIndex = 13;
+            this.childListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // childName
+            // 
+            this.childName.Text = "Name";
+            this.childName.Width = 120;
+            // 
+            // childParent
+            // 
+            this.childParent.Text = "Parent Name";
+            this.childParent.Width = 120;
+            // 
+            // childGender
+            // 
+            this.childGender.Text = "Gender";
+            this.childGender.Width = 240;
+            // 
+            // childPicture
+            // 
+            this.childPicture.Text = "Picture";
+            this.childPicture.Width = 120;
             // 
             // adminPendingRequests
             // 
@@ -265,5 +304,10 @@
         private System.Windows.Forms.ColumnHeader parentsLastName;
         private System.Windows.Forms.ColumnHeader parentsPhoneNumber;
         private System.Windows.Forms.ColumnHeader parentsEmail;
+        private System.Windows.Forms.ListView childListView;
+        private System.Windows.Forms.ColumnHeader childName;
+        private System.Windows.Forms.ColumnHeader childParent;
+        private System.Windows.Forms.ColumnHeader childGender;
+        private System.Windows.Forms.ColumnHeader childPicture;
     }
 }
