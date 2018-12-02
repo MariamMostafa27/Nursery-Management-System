@@ -15,6 +15,8 @@ namespace Nursery_Management_System
         public adminPendingRequests()
         {
             InitializeComponent();
+
+            /*
             DataTable pennding = new DataTable();
             DataTable all = new DataTable();
             SQLQuery MyQuery = new SQLQuery();
@@ -62,7 +64,7 @@ namespace Nursery_Management_System
                 Image image = OP.StringToImage((rows[6].ToString()));
                 imgs.Images.Add("Key",image);
                 childListView.LargeImageList = imgs;
-                */
+                
                 
                         ListViewItem item = new ListViewItem(rows[1].ToString());
                        // item.ImageKey = "Key";
@@ -72,9 +74,9 @@ namespace Nursery_Management_System
                     }
             childListView.View = View.Details;
             childListView.FullRowSelect = true;
+            */
 
-
-
+            
 
         }
         private void pupulate(string Img)
@@ -123,5 +125,9 @@ namespace Nursery_Management_System
             Program.adminLoggedInForm.Show();
         }
 
+        private void adminPendingRequests_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

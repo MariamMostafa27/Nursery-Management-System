@@ -40,6 +40,8 @@ namespace Nursery_Management_System
             this.editButton.Visible = false;
             this.childProfilePanel.Enabled = true;
             this.importImageButton.Visible = true;
+            this.importImageButton.Enabled = true;
+
             this.saveButton.Visible = true;
 
             switch(state)
@@ -153,15 +155,6 @@ namespace Nursery_Management_System
 
         }
 
-        private void importImageButton_Click(object sender, EventArgs e)
-        {
-            /*ImageRead img = new ImageRead();
-            PicLocation = img.PICc(ref PicBox);*/
-
-            
-
-        }
-
         private void childImageButton_Click_2(object sender, EventArgs e)
         {
             OpenFileDialog getPictureLocation = new OpenFileDialog();
@@ -189,6 +182,21 @@ namespace Nursery_Management_System
         {
             this.Hide();
             Program.parentSignUpForm.Show();
+        }
+
+        private void importImageButton_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog getPictureLocation = new OpenFileDialog();
+            getPictureLocation.Filter = "JPG(*.JPG)|*.JPG";
+
+            if (getPictureLocation.ShowDialog() == DialogResult.OK)
+            {
+                ImageOperation OP = new ImageOperation();
+
+                location = OP.ImageToString(Image.FromFile(getPictureLocation.FileName));
+                childImageButton.Image = Image.FromFile(getPictureLocation.FileName);
+
+            }
         }
     }
 }
