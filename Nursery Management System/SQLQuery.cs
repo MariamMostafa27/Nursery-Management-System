@@ -155,6 +155,48 @@ namespace Nursery_Management_System
             return;
         }
 
+        //insert child feature
+        public void insertChildFeature(int childID, int featureID)
+        {
+            SQL mSQL = new SQL();
+            SqlCommand mCommand = new SqlCommand("insertChildFeature");
+            mCommand.CommandType = CommandType.StoredProcedure;
+
+            mCommand.Parameters.AddWithValue("@childID", childID);
+            mCommand.Parameters.AddWithValue("@featureID", featureID);
+
+            mSQL.insertQuery(mCommand);
+            return;
+        }
+
+        //insert feature
+        public void insertFeature(string featureName)
+        {
+            SQL mSQL = new SQL();
+            SqlCommand mCommand = new SqlCommand("insertFeature");
+            mCommand.CommandType = CommandType.StoredProcedure;
+
+            mCommand.Parameters.AddWithValue("@FeaturesName", featureName);
+            mSQL.insertQuery(mCommand);
+            return;
+
+        }
+
+        //insert daily child details
+        public void insertDailyChildDetails(DateTime detailsDate , string childDetails , int childID)
+        {
+            SQL mSQL = new SQL();
+            SqlCommand mCommand = new SqlCommand("insertChildDailyDetails");
+            mCommand.CommandType = CommandType.StoredProcedure;
+
+            mCommand.Parameters.AddWithValue("@detailsDate", detailsDate);
+            mCommand.Parameters.AddWithValue("@childDetails", childDetails);
+            mCommand.Parameters.AddWithValue("@childID", childID);
+            mSQL.insertQuery(mCommand);
+            return;
+
+        }
+
         //insert User
         public void insertUser(string name , string password , string type , Int64 id)
         {
@@ -535,6 +577,27 @@ namespace Nursery_Management_System
         private void deleteUser(string query)
         {
             SQL mSql = new SQL();
+            mSql.deleteQuery(query);
+        }
+
+        public void deleteFeature(int featureID)
+        {
+            SQL mSql = new SQL();
+            string query = "delete from Feature where featureID = " + Convert.ToString(featureID);
+            mSql.deleteQuery(query);
+        }
+
+        public void deleteChildDailyDetails(int childDailyDetailsID)
+        {
+            SQL mSql = new SQL();
+            string query = "delete from childDailyDetails where childDetailsID = " + Convert.ToString(childDailyDetailsID);
+            mSql.deleteQuery(query);
+        }
+
+        public void deleteChildFeature(int featureID)
+        {
+            SQL mSql = new SQL();
+            string query = "delete from Child_Feature where featureID = " +Convert. ToString(featureID);
             mSql.deleteQuery(query);
         }
 
