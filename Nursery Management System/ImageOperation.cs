@@ -9,26 +9,22 @@ namespace Nursery_Management_System
 {
     class ImageOperation
     {
-        public  string ImageToString(Image image)
+        public  byte[] ImageToBinary(Image image)
         {
-            if (image == null)
-                return String.Empty;
-
-            var stream = new MemoryStream();
-            image.Save(stream, image.RawFormat);
-            var bytes = stream.ToArray();
-
-            return Convert.ToBase64String(bytes);
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                return ms.ToArray();
+            }
         }
 
-        public  Image StringToImage(string base64String)
+        public  Image BinaryToImage(byte[] data)
         {
-            if (String.IsNullOrWhiteSpace(base64String))
-                return null;
-
-            var bytes = Convert.FromBase64String(base64String);
-            var stream = new MemoryStream(bytes);
-            return Image.FromStream(stream);
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
+            
         }
 
 

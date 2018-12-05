@@ -16,7 +16,14 @@ namespace Nursery_Management_System
         {
             InitializeComponent();
 
-            /*
+            viewGride();
+
+            
+
+        }
+        private void viewGride()
+        {
+            
             DataTable pennding = new DataTable();
             DataTable all = new DataTable();
             SQLQuery MyQuery = new SQLQuery();
@@ -59,7 +66,7 @@ namespace Nursery_Management_System
                    pennding = MyQuery2.getPendingChild();
                     foreach (DataRow rows in pennding.Rows)
                     {
-                /*
+                
                 imgs.ImageSize = new Size(100, 100);
                 Image image = OP.StringToImage((rows[6].ToString()));
                 imgs.Images.Add("Key",image);
@@ -67,27 +74,20 @@ namespace Nursery_Management_System
                 
                 
                         ListViewItem item = new ListViewItem(rows[1].ToString());
-                       // item.ImageKey = "Key";
+                        item.ImageKey = "Key";
                         item.SubItems.Add(rows[2].ToString());
-                        item.SubItems.Add(rows[4].ToString());
+                        item.SubItems.Add(rows[4].ToStrin8g());
                         childListView.Items.Add(item);
                     }
             childListView.View = View.Details;
             childListView.FullRowSelect = true;
-            */
-
             
 
-        }
-        private void pupulate(string Img)
-        {
-            // IMAGELIST TO IMG
-            
 
 
         }
 
-        
+
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);

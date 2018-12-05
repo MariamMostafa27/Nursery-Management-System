@@ -17,7 +17,7 @@ namespace Nursery_Management_System
     public partial class childForm : Form
     {
         string Gender= "Female";
-        string location=""; 
+        byte[] location; 
         
         public childForm()
         {
@@ -27,7 +27,7 @@ namespace Nursery_Management_System
             Image image= childImageButton.Image;
             ImageOperation OP = new ImageOperation();
 
-            location = OP.ImageToString(image) ;
+            location = OP.ImageToBinary(image) ;
             
 
 
@@ -127,10 +127,6 @@ namespace Nursery_Management_System
             SQLQuery mSQLQuery = new SQLQuery();
             if (childName.Text.Length >= 2)
             {
-                //hild child = new Child(childName.Text, Program.globalParent.firstName, Program.globalParent.id, -1, Gender, DOBpicker.Value, location, Program.globalParent.pending);
-
-                // mSQLQuery.insertChildData(child);
-                
                 Program.parentSignUpForm.ChildOfParent(childName.Text, DOBpicker.Value , Gender, location);
                             
                 MessageBox.Show("Requset has been sent", "Request sent", MessageBoxButtons.OK, MessageBoxIcon.None);
@@ -157,17 +153,7 @@ namespace Nursery_Management_System
 
         private void childImageButton_Click_2(object sender, EventArgs e)
         {
-            OpenFileDialog getPictureLocation = new OpenFileDialog();
-            getPictureLocation.Filter = "JPG(*.JPG)|*.JPG";
-
-            if (getPictureLocation.ShowDialog() == DialogResult.OK)
-            {
-                ImageOperation OP = new ImageOperation();
-
-                location = OP.ImageToString(Image.FromFile(getPictureLocation.FileName));
-                childImageButton.Image = Image.FromFile(getPictureLocation.FileName);
-                
-            }
+            
            
 
         }
@@ -191,11 +177,11 @@ namespace Nursery_Management_System
 
             if (getPictureLocation.ShowDialog() == DialogResult.OK)
             {
-                ImageOperation OP = new ImageOperation();
 
-                location = OP.ImageToString(Image.FromFile(getPictureLocation.FileName));
                 childImageButton.Image = Image.FromFile(getPictureLocation.FileName);
-
+                childImageButton.Image.Width.Equals(248);
+                childImageButton.Image.Height.Equals(256);
+                
             }
         }
     }

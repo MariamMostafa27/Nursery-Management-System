@@ -12,10 +12,10 @@ namespace Nursery_Management_System
         public int roomID { get; set; }
         public string gender { get; set; }
         public DateTime DOB { get; set; }
-        public string image { get; set; }
+        public byte[] image { get; set; }
         
         public Child() {}
-        public Child(String _firstName , string _lastName , Int64 _parentID , int _roomID , string _gender , DateTime _DOB , string _image , int _pending) : 
+        public Child(String _firstName , string _lastName , Int64 _parentID , int _roomID , string _gender , DateTime _DOB , byte[] _image , int _pending) : 
             base( 1 , _firstName , _lastName , _pending)
         {
             parentID = _parentID;

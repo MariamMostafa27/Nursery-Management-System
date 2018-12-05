@@ -16,26 +16,21 @@ namespace Nursery_Management_System
         LinkedList<Child> childOfParent = new LinkedList<Child>();
 
 
-        public parentForm(string state)
+        public parentForm()
         {
             InitializeComponent();
-            if(state=="admin")
-            {
-                acceptButton.Visible = true;
-                declineButton.Visible = true;
-                signUpButton.Visible = false;
-            }
-            else
-            {
-                acceptButton.Visible = false;
-                declineButton.Visible = false;
-                signUpButton.Visible = true;
-            }
+            
         }
 
         private void parentForm_Load(object sender, EventArgs e)
         {
 
+        }
+        public void parentShow()
+        {
+            acceptButton.Visible = false;
+            declineButton.Visible = false;
+            signUpButton.Visible = true;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -83,7 +78,7 @@ namespace Nursery_Management_System
                 Program.childSignUpForm.enableEditing("parentSignUp");
             }
         }
-        public void ChildOfParent(string childName , DateTime dT , string gender , string picLocation)
+        public void ChildOfParent(string childName , DateTime dT , string gender , byte[] picLocation)
         {
             
             Int64 id = Int64.Parse(ID.Text);
