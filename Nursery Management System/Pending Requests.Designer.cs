@@ -42,7 +42,6 @@
             this.childName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.childParent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.childGender = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.childPicture = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.backButtonChild = new System.Windows.Forms.Button();
             this.Parents = new System.Windows.Forms.TabPage();
             this.parentsListView = new System.Windows.Forms.ListView();
@@ -153,13 +152,13 @@
             this.childListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.childName,
             this.childParent,
-            this.childGender,
-            this.childPicture});
+            this.childGender});
             this.childListView.Location = new System.Drawing.Point(-5, 0);
             this.childListView.Name = "childListView";
-            this.childListView.Size = new System.Drawing.Size(916, 401);
+            this.childListView.Size = new System.Drawing.Size(587, 401);
             this.childListView.TabIndex = 13;
             this.childListView.UseCompatibleStateImageBehavior = false;
+            this.childListView.SelectedIndexChanged += new System.EventHandler(this.childListView_SelectedIndexChanged);
             // 
             // childName
             // 
@@ -174,12 +173,6 @@
             // childGender
             // 
             this.childGender.Text = "Gender";
-            this.childGender.Width = 240;
-            // 
-            // childPicture
-            // 
-            this.childPicture.Text = "Picture";
-            this.childPicture.Width = 120;
             // 
             // backButtonChild
             // 
@@ -309,6 +302,5 @@
         private System.Windows.Forms.ColumnHeader childName;
         private System.Windows.Forms.ColumnHeader childParent;
         private System.Windows.Forms.ColumnHeader childGender;
-        private System.Windows.Forms.ColumnHeader childPicture;
     }
 }

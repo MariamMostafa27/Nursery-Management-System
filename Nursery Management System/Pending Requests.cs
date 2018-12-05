@@ -60,7 +60,7 @@ namespace Nursery_Management_System
 
             // Child Pending listview laod
             
-            
+            /*
                 ImageOperation OP = new ImageOperation();
                 ImageList imgs = new ImageList();
                    pennding = MyQuery2.getPendingChild();
@@ -80,7 +80,7 @@ namespace Nursery_Management_System
                         childListView.Items.Add(item);
                     }
             childListView.View = View.Details;
-            childListView.FullRowSelect = true;
+            childListView.FullRowSelect = true;*/
             
 
 
@@ -126,6 +126,11 @@ namespace Nursery_Management_System
         }
 
         private void adminPendingRequests_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void childListView_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

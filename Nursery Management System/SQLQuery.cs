@@ -248,7 +248,7 @@ namespace Nursery_Management_System
                 currentChild.DOB = Convert.ToDateTime(dr["DOB"].ToString());
                 currentChild.gender = dr["gender"].ToString();
                 currentChild.roomID = Convert.ToInt32(dr["roomID"].ToString());
-                currentChild.image = dr["picture"].ToString();
+                currentChild.image =Encoding.ASCII.GetBytes(dr["picture"].ToString());
                 currentChild.pending = Convert.ToInt32(dr["childIsPending"].ToString());
 
                 child.AddLast(currentChild);
