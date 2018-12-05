@@ -39,6 +39,7 @@
             this.backButtonStaff = new System.Windows.Forms.Button();
             this.child = new System.Windows.Forms.TabPage();
             this.childListView = new System.Windows.Forms.ListView();
+            this.childID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.childName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.childParent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.childGender = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -50,10 +51,12 @@
             this.parentsPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.parentsEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.backButtonParents = new System.Windows.Forms.Button();
+            this.childImage = new System.Windows.Forms.PictureBox();
             this.pendingRequestsControl.SuspendLayout();
             this.staff.SuspendLayout();
             this.child.SuspendLayout();
             this.Parents.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.childImage)).BeginInit();
             this.SuspendLayout();
             // 
             // pendingRequestsControl
@@ -137,6 +140,7 @@
             // 
             // child
             // 
+            this.child.Controls.Add(this.childImage);
             this.child.Controls.Add(this.childListView);
             this.child.Controls.Add(this.backButtonChild);
             this.child.Location = new System.Drawing.Point(4, 52);
@@ -150,29 +154,38 @@
             // childListView
             // 
             this.childListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.childID,
             this.childName,
             this.childParent,
             this.childGender});
-            this.childListView.Location = new System.Drawing.Point(-5, 0);
+            this.childListView.Location = new System.Drawing.Point(-4, -2);
             this.childListView.Name = "childListView";
             this.childListView.Size = new System.Drawing.Size(587, 401);
             this.childListView.TabIndex = 13;
             this.childListView.UseCompatibleStateImageBehavior = false;
             this.childListView.SelectedIndexChanged += new System.EventHandler(this.childListView_SelectedIndexChanged);
             // 
+            // childID
+            // 
+            this.childID.DisplayIndex = 2;
+            this.childID.Text = "ID";
+            // 
             // childName
             // 
-            this.childName.Text = "Name";
+            this.childName.DisplayIndex = 0;
+            this.childName.Text = "Child Name";
             this.childName.Width = 120;
             // 
             // childParent
             // 
+            this.childParent.DisplayIndex = 1;
             this.childParent.Text = "Parent Name";
-            this.childParent.Width = 120;
+            this.childParent.Width = 150;
             // 
             // childGender
             // 
             this.childGender.Text = "Gender";
+            this.childGender.Width = 120;
             // 
             // backButtonChild
             // 
@@ -259,6 +272,14 @@
             this.backButtonParents.UseVisualStyleBackColor = false;
             this.backButtonParents.Click += new System.EventHandler(this.backButtonParents_Click);
             // 
+            // childImage
+            // 
+            this.childImage.Location = new System.Drawing.Point(589, 0);
+            this.childImage.Name = "childImage";
+            this.childImage.Size = new System.Drawing.Size(320, 268);
+            this.childImage.TabIndex = 14;
+            this.childImage.TabStop = false;
+            // 
             // adminPendingRequests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -275,6 +296,7 @@
             this.child.PerformLayout();
             this.Parents.ResumeLayout(false);
             this.Parents.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.childImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -301,6 +323,8 @@
         private System.Windows.Forms.ListView childListView;
         private System.Windows.Forms.ColumnHeader childName;
         private System.Windows.Forms.ColumnHeader childParent;
+        private System.Windows.Forms.ColumnHeader childID;
         private System.Windows.Forms.ColumnHeader childGender;
+        private System.Windows.Forms.PictureBox childImage;
     }
 }

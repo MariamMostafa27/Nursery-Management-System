@@ -248,7 +248,7 @@ namespace Nursery_Management_System
                 currentChild.DOB = Convert.ToDateTime(dr["DOB"].ToString());
                 currentChild.gender = dr["gender"].ToString();
                 currentChild.roomID = Convert.ToInt32(dr["roomID"].ToString());
-                currentChild.image =Encoding.ASCII.GetBytes(dr["picture"].ToString());
+                currentChild.image =(byte[])(dr["picture"]);
                 currentChild.pending = Convert.ToInt32(dr["childIsPending"].ToString());
 
                 child.AddLast(currentChild);
@@ -277,6 +277,8 @@ namespace Nursery_Management_System
             string query = "select * from Child where parentID = " + Convert.ToString(id);   
             return getChild(query);
         }
+
+       
 
         //uses specific query to select child by room's ID from database
         public DataTable getChildByRoomID(int id)
@@ -337,6 +339,7 @@ namespace Nursery_Management_System
             string query = "select * from Parent";
             return getParent(query);
         }
+
 
         //uses specific query to select parent by ID from database
         public DataTable getParentByID(Int64 id)

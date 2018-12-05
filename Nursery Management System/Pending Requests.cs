@@ -12,6 +12,7 @@ namespace Nursery_Management_System
 {
     public partial class adminPendingRequests : Form
     {
+        ImageList childImageList = new ImageList();
         public adminPendingRequests()
         {
             InitializeComponent();
@@ -25,9 +26,9 @@ namespace Nursery_Management_System
         {
             
             DataTable pennding = new DataTable();
-            DataTable all = new DataTable();
+            DataTable pennding2 = new DataTable();
             SQLQuery MyQuery = new SQLQuery();
-            SQLQuery MyQuery2 = new SQLQuery();
+            
 
             // staff pennding list veiw load
             pennding = MyQuery.getPendingStaff();
@@ -59,31 +60,34 @@ namespace Nursery_Management_System
             parentsListView.FullRowSelect = true;
 
             // Child Pending listview laod
-            
-            /*
+            pennding = MyQuery.getPendingChild();
+           
+            foreach (DataRow row in pennding.Rows)
+            {
+
+
+
+
+                ListViewItem item = new ListViewItem(row[0].ToString());
+
+                item.SubItems.Add(row[1].ToString());
+                Int64 x = Int64.Parse(row[2].ToString());
+                pennding2 = MyQuery.getParentByID(x);
+                string parentName = "";
+                foreach (DataRow row2 in pennding2.Rows)
+                {
+                    parentName = row[1].ToString();
+                }
+                item.SubItems.Add(parentName);
                 ImageOperation OP = new ImageOperation();
-                ImageList imgs = new ImageList();
-                   pennding = MyQuery2.getPendingChild();
-                    foreach (DataRow rows in pennding.Rows)
-                    {
-                
-                imgs.ImageSize = new Size(100, 100);
-                Image image = OP.StringToImage((rows[6].ToString()));
-                imgs.Images.Add("Key",image);
-                childListView.LargeImageList = imgs;
-                
-                
-                        ListViewItem item = new ListViewItem(rows[1].ToString());
-                        item.ImageKey = "Key";
-                        item.SubItems.Add(rows[2].ToString());
-                        item.SubItems.Add(rows[4].ToStrin8g());
-                        childListView.Items.Add(item);
-                    }
+                byte[] location = (byte[])(row[7]);
+                Image img = OP.BinaryToImage(location);
+                childImageList.Images.Add(row[0].ToString(), img);
+                childImage.Image = img;
+                childListView.Items.Add(item);
+            }
             childListView.View = View.Details;
-            childListView.FullRowSelect = true;*/
-            
-
-
+            childListView.FullRowSelect = true;
 
         }
 
@@ -132,7 +136,13 @@ namespace Nursery_Management_System
 
         private void childListView_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if(childListView.FocusedItem!=null)
+            {
+                string id = childListView.FocusedItem.SubItems[0].Text;
+                childImage.Image = childImageList.Images[id];
+                childImage.SizeMode = PictureBoxSizeMode.StretchImage;
+          
+            }
         }
     }
 }

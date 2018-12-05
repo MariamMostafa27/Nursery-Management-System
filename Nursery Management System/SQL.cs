@@ -60,8 +60,8 @@ namespace Nursery_Management_System
             }
             catch(Exception ex)
             {
-                MessageBox.Show("There was an error while connecting to data base , please check your connection and try again", "Sql Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               
+               MessageBox.Show("There was an error while connecting to data base , please check your connection and try again", "Sql Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              
                  return false;
             }
             finally

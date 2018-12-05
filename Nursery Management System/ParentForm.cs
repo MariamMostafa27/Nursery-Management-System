@@ -83,7 +83,7 @@ namespace Nursery_Management_System
             
             Int64 id = Int64.Parse(ID.Text);
             // 43 room id 
-            Child child = new Child(childName, firstName.Text , id , 43, gender, dT, picLocation, 1);
+            Child child = new Child(childName, firstName.Text , id , 43, gender, dT, picLocation, -1);
             childOfParent.AddLast(child);
 
         }

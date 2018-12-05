@@ -18,12 +18,16 @@ namespace Nursery_Management_System
             }
         }
 
-        public  Image BinaryToImage(byte[] data)
+        public  Image BinaryToImage(byte[] byteArray)
         {
-            using (MemoryStream ms = new MemoryStream(data))
-            {
-                return Image.FromStream(ms);
-            }
+            
+                MemoryStream ms = new MemoryStream(byteArray, 0, byteArray.Length);
+                ms.Write(byteArray, 0, byteArray.Length);
+                Image image = Image.FromStream(ms, true);
+
+            int x = 1;
+                return image;
+           
             
         }
 

@@ -17,19 +17,15 @@ namespace Nursery_Management_System
     public partial class childForm : Form
     {
         string Gender= "Female";
-        byte[] location; 
+        Image image;
         
         public childForm()
         {
             InitializeComponent();
 
             // make location of pictuer is default
-            Image image= childImageButton.Image;
-            ImageOperation OP = new ImageOperation();
-
-            location = OP.ImageToBinary(image) ;
-            
-
+            image = childImageButton.Image;
+           
 
         }
         
@@ -127,7 +123,8 @@ namespace Nursery_Management_System
             SQLQuery mSQLQuery = new SQLQuery();
             if (childName.Text.Length >= 2)
             {
-                Program.parentSignUpForm.ChildOfParent(childName.Text, DOBpicker.Value , Gender, location);
+                ImageOperation OP = new ImageOperation();
+                Program.parentSignUpForm.ChildOfParent(childName.Text, DOBpicker.Value , Gender,OP.ImageToBinary(image ));
                             
                 MessageBox.Show("Requset has been sent", "Request sent", MessageBoxButtons.OK, MessageBoxIcon.None);
                 this.Hide();
