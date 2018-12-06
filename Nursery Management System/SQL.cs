@@ -25,27 +25,27 @@ namespace Nursery_Management_System
             connectionString st = new connectionString();
             mConnection = new SqlConnection(@st.serverName);
         }
-        
+
         public DataTable retrieveQuery(string query)
         {
             DataTable mDataTable = new DataTable();
-            /*try
-            {*/
-                mCommand = new SqlCommand(query, mConnection);
-                mConnection.Open();
-                mAdapter = new SqlDataAdapter(mCommand);
-                mAdapter.Fill(mDataTable);
+            /* try
+             {*/
+            mCommand = new SqlCommand(query, mConnection);
+            mConnection.Open();
+            mAdapter = new SqlDataAdapter(mCommand);
+            mAdapter.Fill(mDataTable);
             /*}
             catch
             {
-                MessageBox.Show("There was an error while connecting to data base , please check your connection and try again", "Sql Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("There was an error while connecting to data base , please check your connection and try again", "Sql Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
-            {
+            {*/
                 mConnection.Close();
                 mAdapter.Dispose();
-            }
-            */
+            //}
+            
             return mDataTable;
         }
         
@@ -58,10 +58,11 @@ namespace Nursery_Management_System
                 mConnection.Open();
                 mCommand.ExecuteNonQuery();
             }
-            catch
-            {   
-                MessageBox.Show("There was an error while connecting to data base , please check your connection and try again", "Sql Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+            catch(Exception ex)
+            {
+               MessageBox.Show("There was an error while connecting to data base , please check your connection and try again", "Sql Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              
+                 return false;
             }
             finally
             {

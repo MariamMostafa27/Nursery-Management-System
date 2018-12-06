@@ -12,14 +12,25 @@ namespace Nursery_Management_System
 {
     public partial class parentForm : Form
     {
+
+        LinkedList<Child> childOfParent = new LinkedList<Child>();
+
+
         public parentForm()
         {
             InitializeComponent();
+            
         }
 
         private void parentForm_Load(object sender, EventArgs e)
         {
 
+        }
+        public void parentShow()
+        {
+            acceptButton.Visible = false;
+            declineButton.Visible = false;
+            signUpButton.Visible = true;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -44,7 +55,7 @@ namespace Nursery_Management_System
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            if(Program.globalType != "")
+            if (Program.globalType != "")
                 Program.parentLoggedInForm.Show();
             else
                 Program.signUpForm.Show();
@@ -52,10 +63,30 @@ namespace Nursery_Management_System
 
         private void addChildButton_Click(object sender, EventArgs e)
         {
-            Program.childSignUpForm.Show();
-            Program.childSignUpForm.enableEditing("parentSignUp");
-        }
+            SQLQuery mSQLQuery = new SQLQuery();
+            ValidateData vaild = new ValidateData();
+            string headProblemOfData = "", promblemInData = "";
 
+            if (vaild.vaildDataForParent(username.Text, email.Text, ID.Text, phoneNumber.Text, creditCard.Text, ref headProblemOfData, ref promblemInData))
+            {
+                MessageBox.Show(promblemInData, headProblemOfData, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+
+                Program.childSignUpForm.Show() ;
+                Program.childSignUpForm.enableEditing("parentSignUp");
+            }
+        }
+        public void ChildOfParent(string childName , DateTime dT , string gender , byte[] picLocation)
+        {
+            
+            Int64 id = Int64.Parse(ID.Text);
+            // 43 room id 
+            Child child = new Child(childName, firstName.Text , id , 43, gender, dT, picLocation, -1);
+            childOfParent.AddLast(child);
+
+        }
         private void parentProfilePanel_Paint(object sender, PaintEventArgs e)
         {
 
@@ -64,14 +95,12 @@ namespace Nursery_Management_System
         private void signUpButton_Click(object sender, EventArgs e)
         {
             SQLQuery mSQLQuery = new SQLQuery();
-            int numberOfChildren = mSQLQuery.childToLinkedList(mSQLQuery.getChildByParentID(Convert.ToInt64(ID.Text))).Count;
-            if (mSQLQuery.checkForUsername(firstName.Text) == true)
+            ValidateData vaild = new ValidateData();
+            int numberOfChildren = childOfParent.Count;
+            string headProblemOfData="", promblemInData="";
+            if(vaild.vaildDataForParent(username.Text,email.Text,ID.Text,phoneNumber.Text,creditCard.Text,numberOfChildren,ref headProblemOfData,ref promblemInData))
             {
-                MessageBox.Show("Username already exists", "Wrong Username or Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if(numberOfChildren == 0)
-            {
-                MessageBox.Show("Parent should have at least one Child", "No Children" , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(promblemInData, headProblemOfData, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -81,8 +110,23 @@ namespace Nursery_Management_System
                 Program.globalParent = parent;
 
                 mSQLQuery.insertUser(username.Text, password.Text, "Parent", parent.id);
+                foreach(Child i in childOfParent)
+                {
+                    mSQLQuery.insertChildData(i);
+                }
+
                 MessageBox.Show("Requset has been sent", "Request sent", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
+        }
+
+        private void acceptButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void declineButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

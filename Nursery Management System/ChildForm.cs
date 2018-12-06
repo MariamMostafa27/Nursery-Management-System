@@ -8,23 +8,36 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+
+
 
 namespace Nursery_Management_System
 {
     public partial class childForm : Form
     {
-        string Gender;
-        string location;
+        string Gender= "Female";
+        Image image;
+        
         public childForm()
         {
             InitializeComponent();
+
+            // make location of pictuer is default
+            image = childImageButton.Image;
+           
+
         }
+        
+
 
         public void enableEditing(string state)
         {
             this.editButton.Visible = false;
             this.childProfilePanel.Enabled = true;
             this.importImageButton.Visible = true;
+            this.importImageButton.Enabled = true;
+
             this.saveButton.Visible = true;
 
             switch(state)
@@ -108,12 +121,21 @@ namespace Nursery_Management_System
         private void saveButton_Click(object sender, EventArgs e)
         {
             SQLQuery mSQLQuery = new SQLQuery();
-            
-            Child child = new Child(childName.Text , Program.globalParent.firstName , Program.globalParent.id , -1 , Gender , DOBpicker.Value , location , Program.globalParent.pending);
+            if (childName.Text.Length >= 2)
+            {
+                ImageOperation OP = new ImageOperation();
+                Program.parentSignUpForm.ChildOfParent(childName.Text, DOBpicker.Value , Gender,OP.ImageToBinary(image ));
+                            
+                MessageBox.Show("Requset has been sent", "Request sent", MessageBoxButtons.OK, MessageBoxIcon.None);
+                this.Hide();
 
-            mSQLQuery.insertChildData(child);
 
-            MessageBox.Show("Requset has been sent", "Request sent", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            else
+            {
+                MessageBox.Show("Please Enter atleast 2 letter", "Invaild Child Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void childName_TextChanged_1(object sender, EventArgs e)
@@ -126,28 +148,38 @@ namespace Nursery_Management_System
 
         }
 
-        private void importImageButton_Click(object sender, EventArgs e)
-        {
-            /*ImageRead img = new ImageRead();
-            PicLocation = img.PICc(ref PicBox);*/
-        }
-
         private void childImageButton_Click_2(object sender, EventArgs e)
         {
-            OpenFileDialog getPictureLocation = new OpenFileDialog();
-            getPictureLocation.Filter = "JPG(*.JPG)|*.JPG";
-
-            if(getPictureLocation.ShowDialog() == DialogResult.OK)
-            {
-                location = getPictureLocation.FileName;
-                childImageButton.Image = Image.FromFile(getPictureLocation.FileName);
-            }
+            
+           
 
         }
 
         private void editButton_Click(object sender, EventArgs e)
         {
             enableEditing("adminEdit");
+
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.parentSignUpForm.Show();
+        }
+
+        private void importImageButton_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog getPictureLocation = new OpenFileDialog();
+            getPictureLocation.Filter = "JPG(*.JPG)|*.JPG";
+
+            if (getPictureLocation.ShowDialog() == DialogResult.OK)
+            {
+
+                childImageButton.Image = Image.FromFile(getPictureLocation.FileName);
+                childImageButton.Image.Width.Equals(248);
+                childImageButton.Image.Height.Equals(256);
+                
+            }
         }
     }
 }

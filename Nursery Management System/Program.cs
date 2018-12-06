@@ -22,8 +22,10 @@ namespace Nursery_Management_System
         public static adminLoggedIn adminLoggedInForm = new adminLoggedIn();
         public static Parent globalParent = new Parent();
         public static editDatabase editDataBaseForm = new editDatabase();
+        public static Child globalChild = new Child();
         public static Staff globalStaff = new Staff();
         public static Admin globalAdmin = new Admin();
+        public static adminPendingRequests adminPendingRequestsForm = new adminPendingRequests();
         public static string globalType = "";
 
         [STAThread]

@@ -20,9 +20,11 @@ namespace Nursery_Management_System
         private void signUpButton_Click(object sender, EventArgs e)
         {
             SQLQuery mSQLQuery = new SQLQuery();
-            if (mSQLQuery.checkForUsername(username.Text) == true)
+            ValidateData vaild = new ValidateData();
+            string headProblemOfData = "", promblemInData = "";
+            if (vaild.vaildDataForStaff(firstName.Text, email.Text, ID.Text, phoneNumber.Text, ref headProblemOfData, ref promblemInData))
             {
-                MessageBox.Show("Username already exists", "Wrong Username or Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(promblemInData, headProblemOfData, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

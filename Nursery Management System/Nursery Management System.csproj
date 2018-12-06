@@ -56,6 +56,7 @@
     <Compile Include="Admin Feedback.Designer.cs">
       <DependentUpon>Admin Feedback.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImageOperation.cs" />
     <Compile Include="Pending Requests.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +106,7 @@
     <Compile Include="StaffForm.Designer.cs">
       <DependentUpon>StaffForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ValidateData.cs" />
     <EmbeddedResource Include="Admin Feedback.resx">
       <DependentUpon>Admin Feedback.cs</DependentUpon>
     </EmbeddedResource>

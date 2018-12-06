@@ -155,6 +155,48 @@ namespace Nursery_Management_System
             return;
         }
 
+        //insert child feature
+        public void insertChildFeature(int childID, int featureID)
+        {
+            SQL mSQL = new SQL();
+            SqlCommand mCommand = new SqlCommand("insertChildFeature");
+            mCommand.CommandType = CommandType.StoredProcedure;
+
+            mCommand.Parameters.AddWithValue("@childID", childID);
+            mCommand.Parameters.AddWithValue("@featureID", featureID);
+
+            mSQL.insertQuery(mCommand);
+            return;
+        }
+
+        //insert feature
+        public void insertFeature(string featureName)
+        {
+            SQL mSQL = new SQL();
+            SqlCommand mCommand = new SqlCommand("insertFeature");
+            mCommand.CommandType = CommandType.StoredProcedure;
+
+            mCommand.Parameters.AddWithValue("@FeaturesName", featureName);
+            mSQL.insertQuery(mCommand);
+            return;
+
+        }
+
+        //insert daily child details
+        public void insertDailyChildDetails(DateTime detailsDate , string childDetails , int childID)
+        {
+            SQL mSQL = new SQL();
+            SqlCommand mCommand = new SqlCommand("insertChildDailyDetails");
+            mCommand.CommandType = CommandType.StoredProcedure;
+
+            mCommand.Parameters.AddWithValue("@detailsDate", detailsDate);
+            mCommand.Parameters.AddWithValue("@childDetails", childDetails);
+            mCommand.Parameters.AddWithValue("@childID", childID);
+            mSQL.insertQuery(mCommand);
+            return;
+
+        }
+
         //insert User
         public void insertUser(string name , string password , string type , Int64 id)
         {
@@ -206,7 +248,7 @@ namespace Nursery_Management_System
                 currentChild.DOB = Convert.ToDateTime(dr["DOB"].ToString());
                 currentChild.gender = dr["gender"].ToString();
                 currentChild.roomID = Convert.ToInt32(dr["roomID"].ToString());
-                currentChild.image = dr["picture"].ToString();
+                currentChild.image =(byte[])(dr["picture"]);
                 currentChild.pending = Convert.ToInt32(dr["childIsPending"].ToString());
 
                 child.AddLast(currentChild);
@@ -223,7 +265,7 @@ namespace Nursery_Management_System
         }
 
         //uses specific query to select child by ID from database
-        public DataTable getChildByID(int id)
+        public DataTable getChildByID(Int64 id)
         {
             string query = "select * from Child where childID = " + Convert.ToString(id);
             return getChild(query);
@@ -236,6 +278,8 @@ namespace Nursery_Management_System
             return getChild(query);
         }
 
+       
+
         //uses specific query to select child by room's ID from database
         public DataTable getChildByRoomID(int id)
         {
@@ -247,6 +291,11 @@ namespace Nursery_Management_System
         public DataTable getPendingChildByParentID(Int64 id)
         {
             string query = "select * from Child where parentID = " + Convert.ToString(id) + " and childIsPending = 1";
+            return getChild(query);
+        }
+        public DataTable getPendingChild()
+        {
+            string query = "select * from Child where childIsPending = 1";
             return getChild(query);
         }
 
@@ -290,6 +339,7 @@ namespace Nursery_Management_System
             string query = "select * from Parent";
             return getParent(query);
         }
+
 
         //uses specific query to select parent by ID from database
         public DataTable getParentByID(Int64 id)
@@ -383,7 +433,7 @@ namespace Nursery_Management_System
         //uses specific query to select pending staff member requests from database
         public DataTable getPendingStaff()
         {
-            string query = "";
+            string query = "select * from Staff where staffIsPending = 1";
             return getStaff(query);
         }
 
@@ -530,6 +580,27 @@ namespace Nursery_Management_System
         private void deleteUser(string query)
         {
             SQL mSql = new SQL();
+            mSql.deleteQuery(query);
+        }
+
+        public void deleteFeature(int featureID)
+        {
+            SQL mSql = new SQL();
+            string query = "delete from Feature where featureID = " + Convert.ToString(featureID);
+            mSql.deleteQuery(query);
+        }
+
+        public void deleteChildDailyDetails(int childDailyDetailsID)
+        {
+            SQL mSql = new SQL();
+            string query = "delete from childDailyDetails where childDetailsID = " + Convert.ToString(childDailyDetailsID);
+            mSql.deleteQuery(query);
+        }
+
+        public void deleteChildFeature(int featureID)
+        {
+            SQL mSql = new SQL();
+            string query = "delete from Child_Feature where featureID = " +Convert. ToString(featureID);
             mSql.deleteQuery(query);
         }
 
