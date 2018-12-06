@@ -38,6 +38,7 @@
             this.staffEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.backButtonStaff = new System.Windows.Forms.Button();
             this.child = new System.Windows.Forms.TabPage();
+            this.childImage = new System.Windows.Forms.PictureBox();
             this.childListView = new System.Windows.Forms.ListView();
             this.childID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.childName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -51,12 +52,11 @@
             this.parentsPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.parentsEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.backButtonParents = new System.Windows.Forms.Button();
-            this.childImage = new System.Windows.Forms.PictureBox();
             this.pendingRequestsControl.SuspendLayout();
             this.staff.SuspendLayout();
             this.child.SuspendLayout();
-            this.Parents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.childImage)).BeginInit();
+            this.Parents.SuspendLayout();
             this.SuspendLayout();
             // 
             // pendingRequestsControl
@@ -65,7 +65,7 @@
             this.pendingRequestsControl.Controls.Add(this.child);
             this.pendingRequestsControl.Controls.Add(this.Parents);
             this.pendingRequestsControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pendingRequestsControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.pendingRequestsControl.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.pendingRequestsControl.Location = new System.Drawing.Point(0, 0);
             this.pendingRequestsControl.Name = "pendingRequestsControl";
             this.pendingRequestsControl.Padding = new System.Drawing.Point(10, 10);
@@ -77,13 +77,14 @@
             // 
             this.staff.Controls.Add(this.staffListView);
             this.staff.Controls.Add(this.backButtonStaff);
-            this.staff.Location = new System.Drawing.Point(4, 52);
+            this.staff.Location = new System.Drawing.Point(4, 53);
             this.staff.Name = "staff";
             this.staff.Padding = new System.Windows.Forms.Padding(3);
-            this.staff.Size = new System.Drawing.Size(912, 484);
+            this.staff.Size = new System.Drawing.Size(912, 483);
             this.staff.TabIndex = 0;
             this.staff.Text = "Staff";
             this.staff.UseVisualStyleBackColor = true;
+            this.staff.Click += new System.EventHandler(this.staff_Click);
             // 
             // staffListView
             // 
@@ -131,9 +132,9 @@
             this.backButtonStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.backButtonStaff.Image = ((System.Drawing.Image)(resources.GetObject("backButtonStaff.Image")));
             this.backButtonStaff.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.backButtonStaff.Location = new System.Drawing.Point(20, 405);
+            this.backButtonStaff.Location = new System.Drawing.Point(8, 407);
             this.backButtonStaff.Name = "backButtonStaff";
-            this.backButtonStaff.Size = new System.Drawing.Size(64, 56);
+            this.backButtonStaff.Size = new System.Drawing.Size(74, 68);
             this.backButtonStaff.TabIndex = 10;
             this.backButtonStaff.UseVisualStyleBackColor = false;
             this.backButtonStaff.Click += new System.EventHandler(this.backButtonStaff_Click);
@@ -143,13 +144,21 @@
             this.child.Controls.Add(this.childImage);
             this.child.Controls.Add(this.childListView);
             this.child.Controls.Add(this.backButtonChild);
-            this.child.Location = new System.Drawing.Point(4, 52);
+            this.child.Location = new System.Drawing.Point(4, 53);
             this.child.Name = "child";
             this.child.Padding = new System.Windows.Forms.Padding(3);
-            this.child.Size = new System.Drawing.Size(912, 484);
+            this.child.Size = new System.Drawing.Size(912, 483);
             this.child.TabIndex = 1;
             this.child.Text = "Child";
             this.child.UseVisualStyleBackColor = true;
+            // 
+            // childImage
+            // 
+            this.childImage.Location = new System.Drawing.Point(589, 0);
+            this.childImage.Name = "childImage";
+            this.childImage.Size = new System.Drawing.Size(320, 268);
+            this.childImage.TabIndex = 14;
+            this.childImage.TabStop = false;
             // 
             // childListView
             // 
@@ -211,10 +220,10 @@
             // 
             this.Parents.Controls.Add(this.parentsListView);
             this.Parents.Controls.Add(this.backButtonParents);
-            this.Parents.Location = new System.Drawing.Point(4, 52);
+            this.Parents.Location = new System.Drawing.Point(4, 53);
             this.Parents.Name = "Parents";
             this.Parents.Padding = new System.Windows.Forms.Padding(3);
-            this.Parents.Size = new System.Drawing.Size(912, 484);
+            this.Parents.Size = new System.Drawing.Size(912, 483);
             this.Parents.TabIndex = 2;
             this.Parents.Text = "Parents";
             this.Parents.UseVisualStyleBackColor = true;
@@ -272,14 +281,6 @@
             this.backButtonParents.UseVisualStyleBackColor = false;
             this.backButtonParents.Click += new System.EventHandler(this.backButtonParents_Click);
             // 
-            // childImage
-            // 
-            this.childImage.Location = new System.Drawing.Point(589, 0);
-            this.childImage.Name = "childImage";
-            this.childImage.Size = new System.Drawing.Size(320, 268);
-            this.childImage.TabIndex = 14;
-            this.childImage.TabStop = false;
-            // 
             // adminPendingRequests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -294,9 +295,9 @@
             this.staff.PerformLayout();
             this.child.ResumeLayout(false);
             this.child.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.childImage)).EndInit();
             this.Parents.ResumeLayout(false);
             this.Parents.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.childImage)).EndInit();
             this.ResumeLayout(false);
 
         }

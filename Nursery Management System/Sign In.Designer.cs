@@ -59,11 +59,11 @@
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.usernameLabel.Font = new System.Drawing.Font("Bebas Neue", 14F);
+            this.usernameLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.usernameLabel.ForeColor = System.Drawing.Color.DimGray;
             this.usernameLabel.Location = new System.Drawing.Point(56, 319);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(97, 29);
+            this.usernameLabel.Size = new System.Drawing.Size(100, 30);
             this.usernameLabel.TabIndex = 3;
             this.usernameLabel.Text = "Username:";
             // 
@@ -71,11 +71,11 @@
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
-            this.passwordLabel.Font = new System.Drawing.Font("Bebas Neue", 14F);
+            this.passwordLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.passwordLabel.ForeColor = System.Drawing.Color.DimGray;
             this.passwordLabel.Location = new System.Drawing.Point(56, 380);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(98, 29);
+            this.passwordLabel.Size = new System.Drawing.Size(99, 30);
             this.passwordLabel.TabIndex = 4;
             this.passwordLabel.Text = "Password:";
             // 

@@ -16,8 +16,7 @@ namespace Nursery_Management_System
         {
             InitializeComponent();
 
-            SQLQuery mSQLQuery = new SQLQuery();
-
+            
             
         }
 

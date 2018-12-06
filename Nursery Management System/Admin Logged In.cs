@@ -67,5 +67,10 @@ namespace Nursery_Management_System
             Program.signForm.Show();
 
         }
+
+        private void adminProfileButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

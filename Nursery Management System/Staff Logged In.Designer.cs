@@ -40,7 +40,7 @@
             this.signOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(201)))), ((int)(((byte)(204)))));
             this.signOutButton.FlatAppearance.BorderSize = 0;
             this.signOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.signOutButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.signOutButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.signOutButton.Image = ((System.Drawing.Image)(resources.GetObject("signOutButton.Image")));
             this.signOutButton.Location = new System.Drawing.Point(459, 270);
@@ -57,7 +57,7 @@
             this.staffFeedbackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(220)))), ((int)(((byte)(206)))));
             this.staffFeedbackButton.FlatAppearance.BorderSize = 0;
             this.staffFeedbackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.staffFeedbackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.staffFeedbackButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.staffFeedbackButton.Image = ((System.Drawing.Image)(resources.GetObject("staffFeedbackButton.Image")));
             this.staffFeedbackButton.Location = new System.Drawing.Point(1, 270);
             this.staffFeedbackButton.Name = "staffFeedbackButton";
@@ -72,7 +72,7 @@
             this.roomButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(187)))), ((int)(((byte)(173)))));
             this.roomButton.FlatAppearance.BorderSize = 0;
             this.roomButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.roomButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.roomButton.Image = ((System.Drawing.Image)(resources.GetObject("roomButton.Image")));
             this.roomButton.Location = new System.Drawing.Point(459, 0);
             this.roomButton.Name = "roomButton";
@@ -88,7 +88,7 @@
             this.staffProfileButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
             this.staffProfileButton.FlatAppearance.BorderSize = 0;
             this.staffProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.staffProfileButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.staffProfileButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.staffProfileButton.Image = ((System.Drawing.Image)(resources.GetObject("staffProfileButton.Image")));
             this.staffProfileButton.Location = new System.Drawing.Point(1, 0);
             this.staffProfileButton.Name = "staffProfileButton";

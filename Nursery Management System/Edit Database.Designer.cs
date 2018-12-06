@@ -62,7 +62,7 @@
             this.children.Location = new System.Drawing.Point(4, 56);
             this.children.Name = "children";
             this.children.Padding = new System.Windows.Forms.Padding(3);
-            this.children.Size = new System.Drawing.Size(797, 480);
+            this.children.Size = new System.Drawing.Size(912, 480);
             this.children.TabIndex = 2;
             this.children.Text = "Children";
             this.children.UseVisualStyleBackColor = true;
@@ -75,7 +75,7 @@
             this.childrenTable.Location = new System.Drawing.Point(3, 3);
             this.childrenTable.Name = "childrenTable";
             this.childrenTable.RowTemplate.Height = 24;
-            this.childrenTable.Size = new System.Drawing.Size(791, 474);
+            this.childrenTable.Size = new System.Drawing.Size(906, 474);
             this.childrenTable.TabIndex = 0;
             this.childrenTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.childrenTable_CellContentClick);
             // 
@@ -85,7 +85,7 @@
             this.parents.Location = new System.Drawing.Point(4, 56);
             this.parents.Name = "parents";
             this.parents.Padding = new System.Windows.Forms.Padding(3);
-            this.parents.Size = new System.Drawing.Size(797, 480);
+            this.parents.Size = new System.Drawing.Size(912, 480);
             this.parents.TabIndex = 1;
             this.parents.Text = "Parents";
             this.parents.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@
             this.parentsTable.Location = new System.Drawing.Point(3, 3);
             this.parentsTable.Name = "parentsTable";
             this.parentsTable.RowTemplate.Height = 24;
-            this.parentsTable.Size = new System.Drawing.Size(791, 474);
+            this.parentsTable.Size = new System.Drawing.Size(906, 474);
             this.parentsTable.TabIndex = 0;
             // 
             // staff
@@ -108,12 +108,13 @@
             this.staff.Location = new System.Drawing.Point(4, 56);
             this.staff.Name = "staff";
             this.staff.Padding = new System.Windows.Forms.Padding(3);
-            this.staff.Size = new System.Drawing.Size(797, 480);
+            this.staff.Size = new System.Drawing.Size(912, 480);
             this.staff.TabIndex = 0;
             this.staff.Text = "Staff";
             // 
             // staffTable
             // 
+            this.staffTable.AllowUserToOrderColumns = true;
             this.staffTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(220)))), ((int)(((byte)(206)))));
             this.staffTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.staffTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -135,7 +136,7 @@
             this.staffTable.Location = new System.Drawing.Point(3, 3);
             this.staffTable.Name = "staffTable";
             this.staffTable.RowTemplate.Height = 24;
-            this.staffTable.Size = new System.Drawing.Size(791, 474);
+            this.staffTable.Size = new System.Drawing.Size(906, 474);
             this.staffTable.TabIndex = 0;
             this.staffTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -177,7 +178,7 @@
             this.editDatabaseControl.Name = "editDatabaseControl";
             this.editDatabaseControl.Padding = new System.Drawing.Point(10, 10);
             this.editDatabaseControl.SelectedIndex = 0;
-            this.editDatabaseControl.Size = new System.Drawing.Size(805, 540);
+            this.editDatabaseControl.Size = new System.Drawing.Size(920, 540);
             this.editDatabaseControl.TabIndex = 0;
             // 
             // rooms
@@ -186,7 +187,7 @@
             this.rooms.Location = new System.Drawing.Point(4, 56);
             this.rooms.Name = "rooms";
             this.rooms.Padding = new System.Windows.Forms.Padding(3);
-            this.rooms.Size = new System.Drawing.Size(797, 480);
+            this.rooms.Size = new System.Drawing.Size(912, 480);
             this.rooms.TabIndex = 3;
             this.rooms.Text = "Rooms";
             this.rooms.UseVisualStyleBackColor = true;
@@ -199,7 +200,7 @@
             this.roomsTable.Location = new System.Drawing.Point(3, 3);
             this.roomsTable.Name = "roomsTable";
             this.roomsTable.RowTemplate.Height = 24;
-            this.roomsTable.Size = new System.Drawing.Size(791, 474);
+            this.roomsTable.Size = new System.Drawing.Size(906, 474);
             this.roomsTable.TabIndex = 0;
             // 
             // staffTableView
@@ -214,10 +215,10 @@
             // 
             // editDatabase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(220)))), ((int)(((byte)(206)))));
-            this.ClientSize = new System.Drawing.Size(805, 540);
+            this.ClientSize = new System.Drawing.Size(920, 540);
             this.Controls.Add(this.editDatabaseControl);
             this.Name = "editDatabase";
             this.Text = "Nursery Management System - Edit Database";

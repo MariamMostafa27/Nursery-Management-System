@@ -59,9 +59,9 @@ namespace Nursery_Management_System
             // 
             // ID
             // 
+            this.ID.Cursor = System.Windows.Forms.Cursors.IBeam;
             resources.ApplyResources(this.ID, "ID");
             this.ID.Name = "ID";
-            this.ID.UseWaitCursor = true;
             // 
             // lastNameLabel
             // 
@@ -71,6 +71,7 @@ namespace Nursery_Management_System
             // 
             // lastName
             // 
+            this.lastName.Cursor = System.Windows.Forms.Cursors.IBeam;
             resources.ApplyResources(this.lastName, "lastName");
             this.lastName.Name = "lastName";
             // 
@@ -82,9 +83,9 @@ namespace Nursery_Management_System
             // 
             // phoneNumber
             // 
+            this.phoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
             resources.ApplyResources(this.phoneNumber, "phoneNumber");
             this.phoneNumber.Name = "phoneNumber";
-            this.phoneNumber.UseWaitCursor = true;
             // 
             // emailLabel
             // 
@@ -94,9 +95,9 @@ namespace Nursery_Management_System
             // 
             // email
             // 
+            this.email.Cursor = System.Windows.Forms.Cursors.IBeam;
             resources.ApplyResources(this.email, "email");
             this.email.Name = "email";
-            this.email.UseWaitCursor = true;
             // 
             // passwordLabel
             // 
@@ -106,6 +107,7 @@ namespace Nursery_Management_System
             // 
             // password
             // 
+            this.password.Cursor = System.Windows.Forms.Cursors.IBeam;
             resources.ApplyResources(this.password, "password");
             this.password.Name = "password";
             this.password.UseSystemPasswordChar = true;
@@ -118,6 +120,7 @@ namespace Nursery_Management_System
             // 
             // username
             // 
+            this.username.Cursor = System.Windows.Forms.Cursors.IBeam;
             resources.ApplyResources(this.username, "username");
             this.username.Name = "username";
             // 
@@ -135,6 +138,7 @@ namespace Nursery_Management_System
             // 
             // firstName
             // 
+            this.firstName.Cursor = System.Windows.Forms.Cursors.IBeam;
             resources.ApplyResources(this.firstName, "firstName");
             this.firstName.Name = "firstName";
             // 

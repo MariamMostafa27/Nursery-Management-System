@@ -116,6 +116,7 @@
             this.Controls.Add(this.feedbackBox);
             this.Name = "Admin_Feedback";
             this.Text = "Nusery Management System - Admin Feedback";
+            this.Load += new System.EventHandler(this.Admin_Feedback_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

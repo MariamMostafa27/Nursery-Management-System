@@ -17,7 +17,7 @@ namespace Nursery_Management_System
         {
             InitializeComponent();
 
-            viewGride();
+            //viewGride();
 
             
 
@@ -143,6 +143,11 @@ namespace Nursery_Management_System
                 childImage.SizeMode = PictureBoxSizeMode.StretchImage;
           
             }
+        }
+
+        private void staff_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

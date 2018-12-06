@@ -39,7 +39,6 @@
             this.saveButton = new System.Windows.Forms.Button();
             this.importImageButton = new System.Windows.Forms.Button();
             this.detailsOfTheDayLabel = new System.Windows.Forms.Label();
-            this.note = new System.Windows.Forms.Label();
             this.DOBpicker = new System.Windows.Forms.DateTimePicker();
             this.roomNumberLabel = new System.Windows.Forms.Label();
             this.roomNumber = new System.Windows.Forms.TextBox();
@@ -84,12 +83,10 @@
             // childProfilePanel
             // 
             this.childProfilePanel.Controls.Add(this.genderPanel);
-            this.childProfilePanel.Controls.Add(this.editButton);
             this.childProfilePanel.Controls.Add(this.childImageButton);
             this.childProfilePanel.Controls.Add(this.saveButton);
             this.childProfilePanel.Controls.Add(this.importImageButton);
             this.childProfilePanel.Controls.Add(this.detailsOfTheDayLabel);
-            this.childProfilePanel.Controls.Add(this.note);
             this.childProfilePanel.Controls.Add(this.DOBpicker);
             this.childProfilePanel.Controls.Add(this.roomNumberLabel);
             this.childProfilePanel.Controls.Add(this.roomNumber);
@@ -119,12 +116,12 @@
             // 
             this.male.AutoSize = true;
             this.male.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.male.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.male.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.male.Image = ((System.Drawing.Image)(resources.GetObject("male.Image")));
             this.male.Location = new System.Drawing.Point(157, 20);
             this.male.Name = "male";
             this.male.Padding = new System.Windows.Forms.Padding(3);
-            this.male.Size = new System.Drawing.Size(125, 39);
+            this.male.Size = new System.Drawing.Size(111, 40);
             this.male.TabIndex = 1;
             this.male.Text = "Male";
             this.male.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -136,12 +133,12 @@
             this.female.AutoSize = true;
             this.female.Checked = true;
             this.female.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.female.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.female.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.female.Image = ((System.Drawing.Image)(resources.GetObject("female.Image")));
             this.female.Location = new System.Drawing.Point(7, 20);
             this.female.Name = "female";
             this.female.Padding = new System.Windows.Forms.Padding(3);
-            this.female.Size = new System.Drawing.Size(155, 39);
+            this.female.Size = new System.Drawing.Size(129, 40);
             this.female.TabIndex = 2;
             this.female.TabStop = true;
             this.female.Text = "Female";
@@ -160,9 +157,9 @@
             this.editButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.editButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.editButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.editButton.ForeColor = System.Drawing.Color.DimGray;
-            this.editButton.Location = new System.Drawing.Point(640, 366);
+            this.editButton.Location = new System.Drawing.Point(639, 316);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(248, 44);
             this.editButton.TabIndex = 18;
@@ -193,7 +190,7 @@
             this.saveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.saveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.saveButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.saveButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.saveButton.Location = new System.Drawing.Point(639, 472);
             this.saveButton.Name = "saveButton";
@@ -211,7 +208,7 @@
             this.importImageButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.importImageButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.importImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.importImageButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.importImageButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.importImageButton.ForeColor = System.Drawing.Color.DimGray;
             this.importImageButton.Location = new System.Drawing.Point(639, 316);
             this.importImageButton.Name = "importImageButton";
@@ -225,24 +222,13 @@
             // detailsOfTheDayLabel
             // 
             this.detailsOfTheDayLabel.AutoSize = true;
-            this.detailsOfTheDayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.detailsOfTheDayLabel.Font = new System.Drawing.Font("Comfortaa", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detailsOfTheDayLabel.ForeColor = System.Drawing.Color.DimGray;
             this.detailsOfTheDayLabel.Location = new System.Drawing.Point(635, 284);
             this.detailsOfTheDayLabel.Name = "detailsOfTheDayLabel";
-            this.detailsOfTheDayLabel.Size = new System.Drawing.Size(288, 20);
+            this.detailsOfTheDayLabel.Size = new System.Drawing.Size(270, 19);
             this.detailsOfTheDayLabel.TabIndex = 24;
             this.detailsOfTheDayLabel.Text = "*click the image for details of the day.";
-            // 
-            // note
-            // 
-            this.note.AutoSize = true;
-            this.note.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.note.ForeColor = System.Drawing.Color.DimGray;
-            this.note.Location = new System.Drawing.Point(635, 284);
-            this.note.Name = "note";
-            this.note.Size = new System.Drawing.Size(288, 20);
-            this.note.TabIndex = 25;
-            this.note.Text = "*click the image for details of the day.";
             // 
             // DOBpicker
             // 
@@ -255,27 +241,28 @@
             // roomNumberLabel
             // 
             this.roomNumberLabel.AutoSize = true;
-            this.roomNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.roomNumberLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.roomNumberLabel.Location = new System.Drawing.Point(165, 250);
             this.roomNumberLabel.Name = "roomNumberLabel";
-            this.roomNumberLabel.Size = new System.Drawing.Size(109, 29);
+            this.roomNumberLabel.Size = new System.Drawing.Size(76, 30);
             this.roomNumberLabel.TabIndex = 21;
             this.roomNumberLabel.Text = "Room #:";
             // 
             // roomNumber
             // 
+            this.roomNumber.Font = new System.Drawing.Font("Consolas", 8F);
             this.roomNumber.Location = new System.Drawing.Point(303, 250);
             this.roomNumber.Name = "roomNumber";
-            this.roomNumber.Size = new System.Drawing.Size(281, 22);
+            this.roomNumber.Size = new System.Drawing.Size(281, 23);
             this.roomNumber.TabIndex = 4;
             // 
             // childNameLabel
             // 
             this.childNameLabel.AutoSize = true;
-            this.childNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.childNameLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.childNameLabel.Location = new System.Drawing.Point(165, 62);
             this.childNameLabel.Name = "childNameLabel";
-            this.childNameLabel.Size = new System.Drawing.Size(88, 29);
+            this.childNameLabel.Size = new System.Drawing.Size(62, 30);
             this.childNameLabel.TabIndex = 16;
             this.childNameLabel.Text = "Name:";
             // 
@@ -290,7 +277,7 @@
             this.groupedFeatures.Controls.Add(this.feature3);
             this.groupedFeatures.Controls.Add(this.feature2);
             this.groupedFeatures.Controls.Add(this.feature1);
-            this.groupedFeatures.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.groupedFeatures.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.groupedFeatures.Location = new System.Drawing.Point(23, 316);
             this.groupedFeatures.Name = "groupedFeatures";
             this.groupedFeatures.Size = new System.Drawing.Size(600, 200);
@@ -303,7 +290,7 @@
             this.feature9.AutoSize = true;
             this.feature9.Location = new System.Drawing.Point(343, 146);
             this.feature9.Name = "feature9";
-            this.feature9.Size = new System.Drawing.Size(121, 33);
+            this.feature9.Size = new System.Drawing.Size(100, 34);
             this.feature9.TabIndex = 16;
             this.feature9.Text = "Feature";
             this.feature9.UseVisualStyleBackColor = true;
@@ -313,7 +300,7 @@
             this.feature8.AutoSize = true;
             this.feature8.Location = new System.Drawing.Point(343, 97);
             this.feature8.Name = "feature8";
-            this.feature8.Size = new System.Drawing.Size(121, 33);
+            this.feature8.Size = new System.Drawing.Size(100, 34);
             this.feature8.TabIndex = 13;
             this.feature8.Text = "Feature";
             this.feature8.UseVisualStyleBackColor = true;
@@ -323,7 +310,7 @@
             this.feature7.AutoSize = true;
             this.feature7.Location = new System.Drawing.Point(343, 49);
             this.feature7.Name = "feature7";
-            this.feature7.Size = new System.Drawing.Size(121, 33);
+            this.feature7.Size = new System.Drawing.Size(100, 34);
             this.feature7.TabIndex = 10;
             this.feature7.Text = "Feature";
             this.feature7.UseVisualStyleBackColor = true;
@@ -333,7 +320,7 @@
             this.feature6.AutoSize = true;
             this.feature6.Location = new System.Drawing.Point(194, 146);
             this.feature6.Name = "feature6";
-            this.feature6.Size = new System.Drawing.Size(121, 33);
+            this.feature6.Size = new System.Drawing.Size(100, 34);
             this.feature6.TabIndex = 15;
             this.feature6.Text = "Feature";
             this.feature6.UseVisualStyleBackColor = true;
@@ -343,7 +330,7 @@
             this.feature5.AutoSize = true;
             this.feature5.Location = new System.Drawing.Point(194, 97);
             this.feature5.Name = "feature5";
-            this.feature5.Size = new System.Drawing.Size(121, 33);
+            this.feature5.Size = new System.Drawing.Size(100, 34);
             this.feature5.TabIndex = 12;
             this.feature5.Text = "Feature";
             this.feature5.UseVisualStyleBackColor = true;
@@ -353,7 +340,7 @@
             this.feature4.AutoSize = true;
             this.feature4.Location = new System.Drawing.Point(194, 49);
             this.feature4.Name = "feature4";
-            this.feature4.Size = new System.Drawing.Size(121, 33);
+            this.feature4.Size = new System.Drawing.Size(100, 34);
             this.feature4.TabIndex = 9;
             this.feature4.Text = "Feature";
             this.feature4.UseVisualStyleBackColor = true;
@@ -363,7 +350,7 @@
             this.feature3.AutoSize = true;
             this.feature3.Location = new System.Drawing.Point(30, 146);
             this.feature3.Name = "feature3";
-            this.feature3.Size = new System.Drawing.Size(121, 33);
+            this.feature3.Size = new System.Drawing.Size(100, 34);
             this.feature3.TabIndex = 14;
             this.feature3.Text = "Feature";
             this.feature3.UseVisualStyleBackColor = true;
@@ -373,7 +360,7 @@
             this.feature2.AutoSize = true;
             this.feature2.Location = new System.Drawing.Point(30, 97);
             this.feature2.Name = "feature2";
-            this.feature2.Size = new System.Drawing.Size(121, 33);
+            this.feature2.Size = new System.Drawing.Size(100, 34);
             this.feature2.TabIndex = 11;
             this.feature2.Text = "Feature";
             this.feature2.UseVisualStyleBackColor = true;
@@ -385,35 +372,36 @@
             this.feature1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.feature1.Location = new System.Drawing.Point(30, 49);
             this.feature1.Name = "feature1";
-            this.feature1.Size = new System.Drawing.Size(121, 33);
+            this.feature1.Size = new System.Drawing.Size(100, 34);
             this.feature1.TabIndex = 9;
             this.feature1.Text = "Feature";
             this.feature1.UseVisualStyleBackColor = true;
             // 
             // childName
             // 
+            this.childName.Font = new System.Drawing.Font("Consolas", 8F);
             this.childName.Location = new System.Drawing.Point(303, 62);
             this.childName.Name = "childName";
-            this.childName.Size = new System.Drawing.Size(281, 22);
+            this.childName.Size = new System.Drawing.Size(281, 23);
             this.childName.TabIndex = 0;
             // 
             // childDOBLabel
             // 
             this.childDOBLabel.AutoSize = true;
-            this.childDOBLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.childDOBLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.childDOBLabel.Location = new System.Drawing.Point(165, 191);
             this.childDOBLabel.Name = "childDOBLabel";
-            this.childDOBLabel.Size = new System.Drawing.Size(160, 29);
+            this.childDOBLabel.Size = new System.Drawing.Size(127, 30);
             this.childDOBLabel.TabIndex = 18;
             this.childDOBLabel.Text = "Date of Birth:";
             // 
             // genderLabel
             // 
             this.genderLabel.AutoSize = true;
-            this.genderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.genderLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.genderLabel.Location = new System.Drawing.Point(165, 120);
             this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(103, 29);
+            this.genderLabel.Size = new System.Drawing.Size(77, 30);
             this.genderLabel.TabIndex = 20;
             this.genderLabel.Text = "Gender:";
             // 
@@ -425,6 +413,7 @@
             this.CancelButton = this.backButton;
             this.ClientSize = new System.Drawing.Size(920, 540);
             this.Controls.Add(this.backButton);
+            this.Controls.Add(this.editButton);
             this.Controls.Add(this.childProfilePanel);
             this.HelpButton = true;
             this.Name = "childForm";
@@ -462,7 +451,6 @@
         private System.Windows.Forms.TextBox roomNumber;
         private System.Windows.Forms.Label roomNumberLabel;
         private System.Windows.Forms.DateTimePicker DOBpicker;
-        private System.Windows.Forms.Label note;
         private System.Windows.Forms.Label detailsOfTheDayLabel;
         private System.Windows.Forms.Button importImageButton;
         private System.Windows.Forms.Button saveButton;
