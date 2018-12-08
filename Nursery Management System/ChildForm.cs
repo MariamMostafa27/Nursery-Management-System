@@ -98,9 +98,15 @@ namespace Nursery_Management_System
 
         private void Child_Load(object sender, EventArgs e)
         {
-
+            Cfill_info();
         }
 
+       public void Cfill_info()
+        {
+            Program.globalChild.ToString();
+            SQLQuery mysqlquery = new SQLQuery();
+            mysqlquery.Child_Data(Program.globalChild.parentID);
+        }         
         private void childProfilePanel_Paint(object sender, PaintEventArgs e)
         {
 
@@ -181,5 +187,6 @@ namespace Nursery_Management_System
                 
             }
         }
+
     }
 }

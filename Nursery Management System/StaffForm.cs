@@ -70,5 +70,44 @@ namespace Nursery_Management_System
         {
 
         }
+        public void Sfill_info()
+        {
+            signUpButton.Visible = false;
+            SQL mysql = new SQL();
+
+            Program.globalAdmin.ToString();
+            Program.globalStaff.ToString();
+            if (Program.globalStaff.type == "Staff")
+            {
+                string staff_username = "select userName from User_Password where staffID like '" + (Program.globalStaff.id).ToString() + "' ";
+                string staff_password = "select userPassword from User_Password where staffID  like'" + (Program.globalStaff.id).ToString() + "' ";
+                string un = mysql.retrieveQuery(staff_username).ToString();
+                string pass = mysql.retrieveQuery(staff_password).ToString();
+                firstName.Text = Program.globalStaff.firstName;
+                lastName.Text = Program.globalStaff.lastName;
+                username.Text = un;
+                email.Text = Program.globalStaff.email;
+                phoneNumber.Text = Program.globalStaff.phoneNumber;
+                password.Text = pass;
+                ID.Text = (Program.globalStaff.id).ToString();
+            }
+            else
+            {
+                string admin_username = "select userName from User_Password where staffID like '" + (Program.globalAdmin.id).ToString() + "' ";
+                string admin_password = "select userPassword from User_Password where staffID  like'" + (Program.globalAdmin.id).ToString() + "' ";
+                string un = mysql.retrieveQuery(admin_username).ToString();
+                string pass = mysql.retrieveQuery(admin_password).ToString();
+                firstName.Text = Program.globalAdmin.firstName;
+                lastName.Text = Program.globalAdmin.lastName;
+                username.Text = un;
+                email.Text = Program.globalAdmin.email;
+                phoneNumber.Text = Program.globalAdmin.phoneNumber;
+                password.Text = pass;
+                ID.Text = (Program.globalAdmin.id).ToString();
+
+            }
+        }
+
+
     }
 }

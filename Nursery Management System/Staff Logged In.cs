@@ -20,6 +20,7 @@ namespace Nursery_Management_System
         private void staffProfileButton_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Program.staffSignUpForm.Sfill_info();
             Program.staffSignUpForm.Show();
         }
 

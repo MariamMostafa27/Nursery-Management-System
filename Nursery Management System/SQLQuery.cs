@@ -234,7 +234,6 @@ namespace Nursery_Management_System
 
             return dt;
         }
-        
         public LinkedList<Child> childToLinkedList(DataTable dt)
         {
             LinkedList<Child> child = new LinkedList<Child>();
@@ -256,6 +255,9 @@ namespace Nursery_Management_System
 
             return child;
         }
+    
+
+
 
         //uses specific query to select all children from database
         public DataTable getAllChildren()
@@ -278,7 +280,17 @@ namespace Nursery_Management_System
             return getChild(query);
         }
 
-       
+// retreiv child profile 
+public DataTable Child_Data(Int64 id)
+        {
+            SQL mSQL = new SQL();
+            SqlCommand mCommand = new SqlCommand("Child_Data");
+            mCommand.CommandType = CommandType.StoredProcedure;
+            mCommand.Parameters.AddWithValue("@parentId", id);
+            DataTable dt = new DataTable();
+             dt = getChildByParentID(id);
+            return dt;
+        }       
 
         //uses specific query to select child by room's ID from database
         public DataTable getChildByRoomID(int id)

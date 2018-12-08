@@ -70,7 +70,9 @@ namespace Nursery_Management_System
 
         private void adminProfileButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Program.staffSignUpForm.Sfill_info();
+            Program.staffSignUpForm.Show();
         }
     }
 }

@@ -128,5 +128,28 @@ namespace Nursery_Management_System
         {
 
         }
+        public void Pfill_info()
+        {
+            acceptButton.Visible = false;
+            declineButton.Visible = false;
+            signUpButton.Visible = false;
+            SQL mysql = new SQL();
+            string parent_username = "select userName from User_Password where parentID like '" + (Program.globalParent.id).ToString() + "' ";
+            string un = mysql.retrieveQuery(parent_username).ToString();
+            Program.globalParent.ToString();
+            firstName.Text = Program.globalParent.firstName;
+            lastName.Text = Program.globalParent.lastName;
+            username.Text = un;
+            email.Text = Program.globalParent.email;
+            creditCard.Text = Program.globalParent.creditCard;
+            ID.Text = Program.globalParent.id.ToString();
+            phoneNumber.Text = Program.globalParent.phoneNumber;
+            address.Text = Program.globalParent.address;
+        }
+
+
+
+
+
     }
 }
