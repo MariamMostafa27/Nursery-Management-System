@@ -34,7 +34,6 @@
             this.genderPanel = new System.Windows.Forms.Panel();
             this.male = new System.Windows.Forms.RadioButton();
             this.female = new System.Windows.Forms.RadioButton();
-            this.editButton = new System.Windows.Forms.Button();
             this.childImageButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.importImageButton = new System.Windows.Forms.Button();
@@ -44,18 +43,19 @@
             this.roomNumber = new System.Windows.Forms.TextBox();
             this.childNameLabel = new System.Windows.Forms.Label();
             this.groupedFeatures = new System.Windows.Forms.GroupBox();
-            this.feature9 = new System.Windows.Forms.CheckBox();
-            this.feature8 = new System.Windows.Forms.CheckBox();
-            this.feature7 = new System.Windows.Forms.CheckBox();
-            this.feature6 = new System.Windows.Forms.CheckBox();
-            this.feature5 = new System.Windows.Forms.CheckBox();
-            this.feature4 = new System.Windows.Forms.CheckBox();
-            this.feature3 = new System.Windows.Forms.CheckBox();
-            this.feature2 = new System.Windows.Forms.CheckBox();
-            this.feature1 = new System.Windows.Forms.CheckBox();
             this.childName = new System.Windows.Forms.TextBox();
             this.childDOBLabel = new System.Windows.Forms.Label();
             this.genderLabel = new System.Windows.Forms.Label();
+            this.editButton = new System.Windows.Forms.Button();
+            this.feature2 = new System.Windows.Forms.CheckBox();
+            this.feature4 = new System.Windows.Forms.CheckBox();
+            this.feature5 = new System.Windows.Forms.CheckBox();
+            this.feature6 = new System.Windows.Forms.CheckBox();
+            this.feature8 = new System.Windows.Forms.CheckBox();
+            this.feature9 = new System.Windows.Forms.CheckBox();
+            this.feature1 = new System.Windows.Forms.CheckBox();
+            this.feature7 = new System.Windows.Forms.CheckBox();
+            this.feature3 = new System.Windows.Forms.CheckBox();
             this.childProfilePanel.SuspendLayout();
             this.genderPanel.SuspendLayout();
             this.groupedFeatures.SuspendLayout();
@@ -145,27 +145,6 @@
             this.female.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.female.UseVisualStyleBackColor = true;
             this.female.CheckedChanged += new System.EventHandler(this.female_CheckedChanged);
-            // 
-            // editButton
-            // 
-            this.editButton.AutoSize = true;
-            this.editButton.BackColor = System.Drawing.Color.Transparent;
-            this.editButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.editButton.Enabled = false;
-            this.editButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.editButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.editButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.editButton.ForeColor = System.Drawing.Color.DimGray;
-            this.editButton.Location = new System.Drawing.Point(639, 316);
-            this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(248, 44);
-            this.editButton.TabIndex = 18;
-            this.editButton.Text = "Edit";
-            this.editButton.UseVisualStyleBackColor = false;
-            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // childImageButton
             // 
@@ -285,98 +264,6 @@
             this.groupedFeatures.TabStop = false;
             this.groupedFeatures.Text = "Features";
             // 
-            // feature9
-            // 
-            this.feature9.AutoSize = true;
-            this.feature9.Location = new System.Drawing.Point(343, 146);
-            this.feature9.Name = "feature9";
-            this.feature9.Size = new System.Drawing.Size(100, 34);
-            this.feature9.TabIndex = 16;
-            this.feature9.Text = "Feature";
-            this.feature9.UseVisualStyleBackColor = true;
-            // 
-            // feature8
-            // 
-            this.feature8.AutoSize = true;
-            this.feature8.Location = new System.Drawing.Point(343, 97);
-            this.feature8.Name = "feature8";
-            this.feature8.Size = new System.Drawing.Size(100, 34);
-            this.feature8.TabIndex = 13;
-            this.feature8.Text = "Feature";
-            this.feature8.UseVisualStyleBackColor = true;
-            // 
-            // feature7
-            // 
-            this.feature7.AutoSize = true;
-            this.feature7.Location = new System.Drawing.Point(343, 49);
-            this.feature7.Name = "feature7";
-            this.feature7.Size = new System.Drawing.Size(100, 34);
-            this.feature7.TabIndex = 10;
-            this.feature7.Text = "Feature";
-            this.feature7.UseVisualStyleBackColor = true;
-            // 
-            // feature6
-            // 
-            this.feature6.AutoSize = true;
-            this.feature6.Location = new System.Drawing.Point(194, 146);
-            this.feature6.Name = "feature6";
-            this.feature6.Size = new System.Drawing.Size(100, 34);
-            this.feature6.TabIndex = 15;
-            this.feature6.Text = "Feature";
-            this.feature6.UseVisualStyleBackColor = true;
-            // 
-            // feature5
-            // 
-            this.feature5.AutoSize = true;
-            this.feature5.Location = new System.Drawing.Point(194, 97);
-            this.feature5.Name = "feature5";
-            this.feature5.Size = new System.Drawing.Size(100, 34);
-            this.feature5.TabIndex = 12;
-            this.feature5.Text = "Feature";
-            this.feature5.UseVisualStyleBackColor = true;
-            // 
-            // feature4
-            // 
-            this.feature4.AutoSize = true;
-            this.feature4.Location = new System.Drawing.Point(194, 49);
-            this.feature4.Name = "feature4";
-            this.feature4.Size = new System.Drawing.Size(100, 34);
-            this.feature4.TabIndex = 9;
-            this.feature4.Text = "Feature";
-            this.feature4.UseVisualStyleBackColor = true;
-            // 
-            // feature3
-            // 
-            this.feature3.AutoSize = true;
-            this.feature3.Location = new System.Drawing.Point(30, 146);
-            this.feature3.Name = "feature3";
-            this.feature3.Size = new System.Drawing.Size(100, 34);
-            this.feature3.TabIndex = 14;
-            this.feature3.Text = "Feature";
-            this.feature3.UseVisualStyleBackColor = true;
-            // 
-            // feature2
-            // 
-            this.feature2.AutoSize = true;
-            this.feature2.Location = new System.Drawing.Point(30, 97);
-            this.feature2.Name = "feature2";
-            this.feature2.Size = new System.Drawing.Size(100, 34);
-            this.feature2.TabIndex = 11;
-            this.feature2.Text = "Feature";
-            this.feature2.UseVisualStyleBackColor = true;
-            // 
-            // feature1
-            // 
-            this.feature1.AutoSize = true;
-            this.feature1.Checked = true;
-            this.feature1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.feature1.Location = new System.Drawing.Point(30, 49);
-            this.feature1.Name = "feature1";
-            this.feature1.Size = new System.Drawing.Size(100, 34);
-            this.feature1.TabIndex = 9;
-            this.feature1.Text = "Feature";
-            this.feature1.UseVisualStyleBackColor = true;
-            // 
             // childName
             // 
             this.childName.Font = new System.Drawing.Font("Consolas", 8F);
@@ -404,6 +291,119 @@
             this.genderLabel.Size = new System.Drawing.Size(77, 30);
             this.genderLabel.TabIndex = 20;
             this.genderLabel.Text = "Gender:";
+            // 
+            // editButton
+            // 
+            this.editButton.AutoSize = true;
+            this.editButton.BackColor = System.Drawing.Color.Transparent;
+            this.editButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.editButton.Enabled = false;
+            this.editButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.editButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.editButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.editButton.ForeColor = System.Drawing.Color.DimGray;
+            this.editButton.Location = new System.Drawing.Point(639, 316);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(248, 44);
+            this.editButton.TabIndex = 18;
+            this.editButton.Text = "Edit";
+            this.editButton.UseVisualStyleBackColor = false;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
+            // feature2
+            // 
+            this.feature2.AutoSize = true;
+            this.feature2.Location = new System.Drawing.Point(30, 97);
+            this.feature2.Name = "feature2";
+            this.feature2.Size = new System.Drawing.Size(100, 34);
+            this.feature2.TabIndex = 11;
+            this.feature2.Text = "Feature";
+            this.feature2.UseVisualStyleBackColor = true;
+            // 
+            // feature4
+            // 
+            this.feature4.AutoSize = true;
+            this.feature4.Location = new System.Drawing.Point(194, 49);
+            this.feature4.Name = "feature4";
+            this.feature4.Size = new System.Drawing.Size(100, 34);
+            this.feature4.TabIndex = 9;
+            this.feature4.Text = "Feature";
+            this.feature4.UseVisualStyleBackColor = true;
+            // 
+            // feature5
+            // 
+            this.feature5.AutoSize = true;
+            this.feature5.Location = new System.Drawing.Point(194, 97);
+            this.feature5.Name = "feature5";
+            this.feature5.Size = new System.Drawing.Size(100, 34);
+            this.feature5.TabIndex = 12;
+            this.feature5.Text = "Feature";
+            this.feature5.UseVisualStyleBackColor = true;
+            // 
+            // feature6
+            // 
+            this.feature6.AutoSize = true;
+            this.feature6.Location = new System.Drawing.Point(194, 146);
+            this.feature6.Name = "feature6";
+            this.feature6.Size = new System.Drawing.Size(100, 34);
+            this.feature6.TabIndex = 15;
+            this.feature6.Text = "Feature";
+            this.feature6.UseVisualStyleBackColor = true;
+            // 
+            // feature8
+            // 
+            this.feature8.AutoSize = true;
+            this.feature8.Location = new System.Drawing.Point(343, 97);
+            this.feature8.Name = "feature8";
+            this.feature8.Size = new System.Drawing.Size(100, 34);
+            this.feature8.TabIndex = 13;
+            this.feature8.Text = "Feature";
+            this.feature8.UseVisualStyleBackColor = true;
+            // 
+            // feature9
+            // 
+            this.feature9.AutoSize = true;
+            this.feature9.Location = new System.Drawing.Point(343, 146);
+            this.feature9.Name = "feature9";
+            this.feature9.Size = new System.Drawing.Size(100, 34);
+            this.feature9.TabIndex = 16;
+            this.feature9.Text = "Feature";
+            this.feature9.UseVisualStyleBackColor = true;
+            // 
+            // feature1
+            // 
+            this.feature1.AutoSize = true;
+            this.feature1.Checked = true;
+            this.feature1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.feature1.Location = new System.Drawing.Point(30, 49);
+            this.feature1.Name = "feature1";
+            this.feature1.Size = new System.Drawing.Size(100, 34);
+            this.feature1.TabIndex = 9;
+            this.feature1.Text = "Feature";
+            this.feature1.UseVisualStyleBackColor = true;
+            // 
+            // feature7
+            // 
+            this.feature7.AutoSize = true;
+            this.feature7.Location = new System.Drawing.Point(343, 49);
+            this.feature7.Name = "feature7";
+            this.feature7.Size = new System.Drawing.Size(100, 34);
+            this.feature7.TabIndex = 10;
+            this.feature7.Text = "Feature";
+            this.feature7.UseVisualStyleBackColor = true;
+            // 
+            // feature3
+            // 
+            this.feature3.AutoSize = true;
+            this.feature3.Location = new System.Drawing.Point(30, 146);
+            this.feature3.Name = "feature3";
+            this.feature3.Size = new System.Drawing.Size(100, 34);
+            this.feature3.TabIndex = 14;
+            this.feature3.Text = "Feature";
+            this.feature3.UseVisualStyleBackColor = true;
             // 
             // childForm
             // 
@@ -437,15 +437,6 @@
         private System.Windows.Forms.Label genderLabel;
         private System.Windows.Forms.Label childDOBLabel;
         private System.Windows.Forms.TextBox childName;
-        private System.Windows.Forms.CheckBox feature1;
-        private System.Windows.Forms.CheckBox feature2;
-        private System.Windows.Forms.CheckBox feature3;
-        private System.Windows.Forms.CheckBox feature4;
-        private System.Windows.Forms.CheckBox feature5;
-        private System.Windows.Forms.CheckBox feature6;
-        private System.Windows.Forms.CheckBox feature7;
-        private System.Windows.Forms.CheckBox feature8;
-        private System.Windows.Forms.CheckBox feature9;
         private System.Windows.Forms.GroupBox groupedFeatures;
         private System.Windows.Forms.Label childNameLabel;
         private System.Windows.Forms.TextBox roomNumber;
@@ -459,5 +450,14 @@
         private System.Windows.Forms.RadioButton male;
         private System.Windows.Forms.Panel genderPanel;
         private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.CheckBox feature1;
+        private System.Windows.Forms.CheckBox feature2;
+        private System.Windows.Forms.CheckBox feature3;
+        private System.Windows.Forms.CheckBox feature4;
+        private System.Windows.Forms.CheckBox feature5;
+        private System.Windows.Forms.CheckBox feature6;
+        private System.Windows.Forms.CheckBox feature7;
+        private System.Windows.Forms.CheckBox feature8;
+        private System.Windows.Forms.CheckBox feature9;
     }
 }

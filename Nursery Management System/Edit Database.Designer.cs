@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(editDatabase));
             this.children = new System.Windows.Forms.TabPage();
             this.childrenTable = new System.Windows.Forms.DataGridView();
             this.parents = new System.Windows.Forms.TabPage();
@@ -44,6 +45,7 @@
             this.rooms = new System.Windows.Forms.TabPage();
             this.roomsTable = new System.Windows.Forms.DataGridView();
             this.staffTableView = new System.Windows.Forms.DataGridView();
+            this.backButton = new System.Windows.Forms.Button();
             this.children.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.childrenTable)).BeginInit();
             this.parents.SuspendLayout();
@@ -62,7 +64,7 @@
             this.children.Location = new System.Drawing.Point(4, 56);
             this.children.Name = "children";
             this.children.Padding = new System.Windows.Forms.Padding(3);
-            this.children.Size = new System.Drawing.Size(912, 480);
+            this.children.Size = new System.Drawing.Size(912, 428);
             this.children.TabIndex = 2;
             this.children.Text = "Children";
             this.children.UseVisualStyleBackColor = true;
@@ -75,7 +77,7 @@
             this.childrenTable.Location = new System.Drawing.Point(3, 3);
             this.childrenTable.Name = "childrenTable";
             this.childrenTable.RowTemplate.Height = 24;
-            this.childrenTable.Size = new System.Drawing.Size(906, 474);
+            this.childrenTable.Size = new System.Drawing.Size(906, 422);
             this.childrenTable.TabIndex = 0;
             this.childrenTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.childrenTable_CellContentClick);
             // 
@@ -85,7 +87,7 @@
             this.parents.Location = new System.Drawing.Point(4, 56);
             this.parents.Name = "parents";
             this.parents.Padding = new System.Windows.Forms.Padding(3);
-            this.parents.Size = new System.Drawing.Size(912, 480);
+            this.parents.Size = new System.Drawing.Size(912, 428);
             this.parents.TabIndex = 1;
             this.parents.Text = "Parents";
             this.parents.UseVisualStyleBackColor = true;
@@ -98,7 +100,7 @@
             this.parentsTable.Location = new System.Drawing.Point(3, 3);
             this.parentsTable.Name = "parentsTable";
             this.parentsTable.RowTemplate.Height = 24;
-            this.parentsTable.Size = new System.Drawing.Size(906, 474);
+            this.parentsTable.Size = new System.Drawing.Size(906, 422);
             this.parentsTable.TabIndex = 0;
             // 
             // staff
@@ -108,7 +110,7 @@
             this.staff.Location = new System.Drawing.Point(4, 56);
             this.staff.Name = "staff";
             this.staff.Padding = new System.Windows.Forms.Padding(3);
-            this.staff.Size = new System.Drawing.Size(912, 480);
+            this.staff.Size = new System.Drawing.Size(912, 406);
             this.staff.TabIndex = 0;
             this.staff.Text = "Staff";
             // 
@@ -136,7 +138,7 @@
             this.staffTable.Location = new System.Drawing.Point(3, 3);
             this.staffTable.Name = "staffTable";
             this.staffTable.RowTemplate.Height = 24;
-            this.staffTable.Size = new System.Drawing.Size(906, 474);
+            this.staffTable.Size = new System.Drawing.Size(906, 400);
             this.staffTable.TabIndex = 0;
             this.staffTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -172,13 +174,13 @@
             this.editDatabaseControl.Controls.Add(this.parents);
             this.editDatabaseControl.Controls.Add(this.children);
             this.editDatabaseControl.Controls.Add(this.rooms);
-            this.editDatabaseControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.editDatabaseControl.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.editDatabaseControl.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.editDatabaseControl.Location = new System.Drawing.Point(0, 0);
+            this.editDatabaseControl.Location = new System.Drawing.Point(0, 74);
             this.editDatabaseControl.Name = "editDatabaseControl";
             this.editDatabaseControl.Padding = new System.Drawing.Point(10, 10);
             this.editDatabaseControl.SelectedIndex = 0;
-            this.editDatabaseControl.Size = new System.Drawing.Size(920, 540);
+            this.editDatabaseControl.Size = new System.Drawing.Size(920, 466);
             this.editDatabaseControl.TabIndex = 0;
             // 
             // rooms
@@ -187,7 +189,7 @@
             this.rooms.Location = new System.Drawing.Point(4, 56);
             this.rooms.Name = "rooms";
             this.rooms.Padding = new System.Windows.Forms.Padding(3);
-            this.rooms.Size = new System.Drawing.Size(912, 480);
+            this.rooms.Size = new System.Drawing.Size(912, 428);
             this.rooms.TabIndex = 3;
             this.rooms.Text = "Rooms";
             this.rooms.UseVisualStyleBackColor = true;
@@ -200,7 +202,7 @@
             this.roomsTable.Location = new System.Drawing.Point(3, 3);
             this.roomsTable.Name = "roomsTable";
             this.roomsTable.RowTemplate.Height = 24;
-            this.roomsTable.Size = new System.Drawing.Size(906, 474);
+            this.roomsTable.Size = new System.Drawing.Size(906, 422);
             this.roomsTable.TabIndex = 0;
             // 
             // staffTableView
@@ -213,12 +215,32 @@
             this.staffTableView.TabIndex = 0;
             this.staffTableView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // backButton
+            // 
+            this.backButton.AutoSize = true;
+            this.backButton.BackColor = System.Drawing.Color.Transparent;
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.backButton.FlatAppearance.BorderSize = 0;
+            this.backButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
+            this.backButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.backButton.Location = new System.Drawing.Point(2, 2);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(107, 70);
+            this.backButton.TabIndex = 11;
+            this.backButton.UseVisualStyleBackColor = false;
+            // 
             // editDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(220)))), ((int)(((byte)(206)))));
             this.ClientSize = new System.Drawing.Size(920, 540);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.editDatabaseControl);
             this.Name = "editDatabase";
             this.Text = "Nursery Management System - Edit Database";
@@ -234,6 +256,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.roomsTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffTableView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -255,5 +278,6 @@
         public System.Windows.Forms.DataGridView childrenTable;
         public System.Windows.Forms.DataGridView parentsTable;
         public System.Windows.Forms.DataGridView roomsTable;
+        private System.Windows.Forms.Button backButton;
     }
 }

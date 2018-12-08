@@ -54,6 +54,7 @@
             this.address = new System.Windows.Forms.TextBox();
             this.childrenPanel = new System.Windows.Forms.Panel();
             this.addChildButton = new System.Windows.Forms.Button();
+            this.payButton = new System.Windows.Forms.Button();
             this.parentProfilePanel.SuspendLayout();
             this.childrenPanel.SuspendLayout();
             this.SuspendLayout();
@@ -90,7 +91,7 @@
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
-            this.backButton.Location = new System.Drawing.Point(2, 2);
+            this.backButton.Location = new System.Drawing.Point(0, 0);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(107, 90);
             this.backButton.TabIndex = 10;
@@ -357,6 +358,7 @@
             // childrenPanel
             // 
             this.childrenPanel.AutoScroll = true;
+            this.childrenPanel.Controls.Add(this.payButton);
             this.childrenPanel.Controls.Add(this.addChildButton);
             this.childrenPanel.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.childrenPanel.Location = new System.Drawing.Point(5, 320);
@@ -381,6 +383,20 @@
             this.addChildButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.addChildButton.UseVisualStyleBackColor = true;
             this.addChildButton.Click += new System.EventHandler(this.addChildButton_Click);
+            // 
+            // payButton
+            // 
+            this.payButton.BackColor = System.Drawing.Color.Transparent;
+            this.payButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.payButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.payButton.Image = ((System.Drawing.Image)(resources.GetObject("payButton.Image")));
+            this.payButton.Location = new System.Drawing.Point(21, 30);
+            this.payButton.Name = "payButton";
+            this.payButton.Size = new System.Drawing.Size(150, 150);
+            this.payButton.TabIndex = 46;
+            this.payButton.Text = "Pay Fees";
+            this.payButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.payButton.UseVisualStyleBackColor = false;
             // 
             // parentForm
             // 
@@ -429,5 +445,6 @@
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Button declineButton;
         private System.Windows.Forms.Button acceptButton;
+        private System.Windows.Forms.Button payButton;
     }
 }

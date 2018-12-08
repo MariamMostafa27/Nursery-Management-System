@@ -12,7 +12,8 @@ namespace Nursery_Management_System
         /// The main entry point for the application.
         /// </summary>
         public static sign signForm = new sign();
-        public static signIn signInForm = new signIn();
+        //public static signIn signInForm = new signIn();
+        public static signInTemplate signInForm = new signInTemplate();
         public static parentLoggedIn parentLoggedInForm = new parentLoggedIn();
         public static staffLoggedIn staffLoggedInForm = new staffLoggedIn(); 
         public static signUp signUpForm = new signUp();
@@ -33,7 +34,7 @@ namespace Nursery_Management_System
         {
             Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(signForm);
+            Application.Run(signInForm);
         }
     }
 }
