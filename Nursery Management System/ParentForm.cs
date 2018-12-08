@@ -146,10 +146,5 @@ namespace Nursery_Management_System
             phoneNumber.Text = Program.globalParent.phoneNumber;
             address.Text = Program.globalParent.address;
         }
-
-
-
-
-
     }
 }

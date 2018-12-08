@@ -280,6 +280,20 @@ namespace Nursery_Management_System
             return getChild(query);
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // retreiv child profile 
 public DataTable Child_Data(Int64 id)
         {
@@ -292,6 +306,23 @@ public DataTable Child_Data(Int64 id)
             return dt;
         }       
 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         //uses specific query to select child by room's ID from database
         public DataTable getChildByRoomID(int id)
         {
